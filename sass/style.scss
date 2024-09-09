@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// リセットCSS
+@use "foundation/reset";
+
+//ベースとなるCSS
+@use "foundation/base";
+
+//compornent
+@use "object/compornent/font";

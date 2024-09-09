@@ -1,0 +1,39 @@
+$breakpoints: (
+    "sp": "screen and (max-width: 600px)",
+    "tab": "screen and (min-width: 601px)",
+    "pc": "screen and (min-width: 1024px)",
+);
+
+// mixinを定義する（初期値はsp）
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+//画面幅に合わせてpxをvwに変換する
+
+$pcDesignSize: 1920;
+$tabDesignSize: 768;
+$spDesignSize: 375;
+
+//PCデザイン用
+@function pc-vw($pixelsVw) {
+    @return math.div($pixelsVw , $pcDesignSize) * 100vw;
+}
+
+//tabletデザイン用
+@function tab-vw($pixelsVw) {
+    @return math.div($pixelsVw , $tabDesignSize) * 100vw;
+}
+
+//SPデザイン用
+@function sp-vw($pixelsVw) {
+    @return math.div($pixelsVw , $spDesignSize) * 100vw;
+}
+
+//pxをremに変換する関数
+$root-size: 16; //htmlに設定してあるfont-size
+@function rem($px) {
+@return math.div($px, $root-size) * 1rem;
+}

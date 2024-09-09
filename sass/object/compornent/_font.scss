@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*=======================
+  フォントファミリー 
+  =======================*/
+  @use "../../foundation/forwords" as fw;
+
+.c-font--tsukuarg{
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+}
