@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*=======================
+ヘッダー
+=======================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-header{
+    width: 100%;
+    padding: 10px 16px 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 8px solid fw.$color--yellow;
+    @include fw.mq( "tab" ){
+        padding: 13px 40px 9px;
+        border-width: 6px;
+        @include fw.mq( "pc" ){
+            padding: 16px 40px 12px;
+        }
+    }
+    h1{
+        width: 116px;
+        height: auto;
+        img{
+            width: 100%;
+        }
+    }
+}

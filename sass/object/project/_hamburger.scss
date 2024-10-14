@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*============================
+ヘッダーボタン（ハンバーガーボタン）
+==============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+$btnWidth: 32px;
+$btnHeight: 1px;
+
+.p-hamburger{
+    width: 50px;
+    height: 50px;
+    background-color: fw.$color--white;
+    border: none;
+    position: relative;
+    @include fw.mq("tab"){
+        display: none;
+    }
+    &::before,
+    &::after{
+        content: "";
+        width: $btnWidth;
+        height: $btnHeight;
+        background: fw.$color--black;
+        position: absolute;
+        left: calc( 50% - math.div(#{$btnWidth}, 2 ));
+        display: block;
+        transition: transform 0.2s;
+    }
+    &::before{
+        top: 16px;
+    }
+    &::after{
+        top: 34px;
+    }
+    > span{
+        width: $btnWidth;
+        height: $btnHeight;
+        font-size: 0px;
+        background: fw.$color--black;
+        background-size: auto $btnHeight;
+        position: absolute;
+        left: calc( 50% - math.div( #{$btnWidth}, 2));
+        top: 50%;
+        transition: transdorm 0.2s;
+    }
+    &.is-open{
+        &::before{
+            transform: rotate( 45deg );
+            top: 25px;
+        }
+        &::after{
+            transform: rotate( -45deg );
+            top: 25px;
+        }
+        > span{
+            background: none;
+        }
+    }
+}
+
+body.is-open{
+    position: fixed;
+}

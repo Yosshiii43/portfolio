@@ -1,9 +1,18 @@
 @charset "UTF-8";
-/*=======================
-  フォントファミリー 
-  =======================*/
-  @use "../../foundation/forwords" as fw;
+/*=============================
+フォントファミリー ・フォントウェイト
+  =============================*/
+    @use "../../foundation/forwords" as fw;
 
 .c-font--tsukuarg{
-    font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+}
+
+.c-font--nunito200{
+  font-family: "Nunito";
+  font-weight: 200;
+}
+.c-font--nunito300{
+  font-family: "Nunito";
+  font-weight: 300;
 }

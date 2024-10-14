@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*=======================
+グローバルナビ
+=======================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+body{
+    overflow-x: hidden;//横スクロールでメニューが出てこないようにする
+}
+.p-header__menu{
+    height: 50px;
+    position: relative;
+    @include fw.mq("tab"){
+        height: inherit;
+    }
+    .p-gmenu{
+        transition: all 300ms 0s ease;
+        width: fw.sp-vw( 160 );
+        height: 100vh;
+        padding: 20px 0 0;
+        position: fixed;
+        top: 64px;//h1の画像がハンバーガーの高さより大きいのでh1の高さ57px + padinng-bottom8pxとなると思うのだけど1px調整
+        background: fw.$color--white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        overflow-y: auto;
+        left: 100%;
+        @include fw.mq("tab"){
+            width: inherit;
+            height: inherit;
+            padding: inherit;
+            position: static;
+            background: inherit;
+            flex-direction: row;
+            transition: inherit;
+        }
+        &__item{
+            font-weight: 200;
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            @include fw.mq("tab"){
+                margin-bottom: 0;
+            }
+        }
+        //タブレット・PC時の横並びのメニュー
+        .p-gmenu{
+            @include fw.mq("tab"){
+                display: flex;
+                align-items: center;
+            }
+            &__item{
+                font-size: fw.rem( 20 );
+                @include fw.mq("tab"){
+                    margin-right: fw.rem( 32 );
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    @include fw.mq("pc"){
+                        margin-right: fw.rem( 40 );
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+                a{
+                    @include fw.mq("tab"){
+                        white-space: nowrap;
+                    }
+                }
+            }  
+        }
+    }
+    &.is-open{
+        .p-gmenu{
+            left: calc(100% - fw.sp-vw( 160 ));
+        }
+    }
+}

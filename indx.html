@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script>
         (function(d) {
@@ -17,8 +20,36 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 style="font-weight: 400; font-size: 36px;">感動を心に、結果を形に</h1>
-    <p>　私は、ただ美しいだけのデザインではなく、人々の心に響く体験を提供することを目指しています。</p>
-    <p>　デザインとサイト構築を通じて、ユーザーの感情を動かし、その感動が具体的な行動に繋がるよう工夫を凝らしています。</p>
+    <header class="l-header p-header">
+        <h1 class="p-header__title">
+            <img src="./img/header__title.png" alt="Yoshino's portfolio site">
+        </h1>
+        <div class="p-header__menu">
+            <button class="p-hamburger js-hamburger">
+                <span>menuボタン</span>
+            </button>
+            <ul class="p-gmenu">
+                <li class="p-gmenu__item"><a href="#">Service</a></li>
+                <li class="p-gmenu__item"><a href="#">Works</a></li>
+                <li class="p-gmenu__item"><a href="#">About</a></li>
+                <li class="p-gmenu__item"><a href="#">Flow</a></li>
+                <li class="p-gmenu__item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="l-main">
+        <section class="p-mainVisual">
+            <div class="c-wrap">
+                <div class="p-mainVisual__title">
+                    <p class="p-mainVisual__title__top c-font--nunito200">Yoshino’s Portfolio Site</p>
+                    <p class="p-mainVisual__title__bottom"><span class="c-font--nunito300">Web</span>デザイン / コーディング</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="c-bg--yellow">
+        <p>フッター</p>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

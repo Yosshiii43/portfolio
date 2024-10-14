@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/*=======================
+メインビジュアル
+=======================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-mainVisual{
+    position: relative;
+    background: fw.$color--gray;
+    height: fw.sp-vw( 560 );
+    background-size: cover;
+    @include fw.mq( "tab" ){
+        height: fw.tab-vw( 308 );
+        @include fw.mq( "pc" ){
+            height: fw.pc-vw( 386);
+        }
+    }
+    .c-wrap{
+        position: absolute;
+        width: fw.sp-vw( 344 );
+        height: fw.sp-vw( 460 );
+        top: fw.sp-vw( 80 );
+        left: fw.sp-vw( 25 );
+        background: url(../../../img/mainVisual__img--sp.png) no-repeat center right;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        @include fw.mq("tab"){
+            width: fw.tab-vw( 628 );
+            height: fw.tab-vw( 260 );
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background: url(../../../img/mainVisual__img--pctab.png) no-repeat center right;
+            background-size: contain;
+            @include fw.mq("pc"){
+                width: fw.pc-vw( 800 );
+                height: fw.pc-vw( 324 );
+            }
+        }
+        .p-mainVisual__title{
+            width: fw.sp-vw( 172 );
+            @include fw.mq("tab"){
+                width: 100%;
+            }
+            &__top{
+                font-size: fw.rem( 30 );
+                margin-bottom: fw.sp-vw( 60 );
+                @include fw.mq("tab"){
+                    font-size: fw.rem( 32 );
+                    margin-top: inherit;
+                    margin-bottom: fw.tab-vw( 16 );
+                    @include fw.mq("pc"){
+                        font-size: fw.rem( 36 );
+                    }
+                }
+            }
+            &__bottom{
+                font-size: fw.rem( 22 );
+                width: fw.sp-vw( 142 );
+                @include fw.mq("tab"){
+                    width: inherit;
+                    font-size: fw.rem( 24 );
+                }
+            }
+        }
+    }
+}

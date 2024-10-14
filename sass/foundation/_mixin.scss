@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $breakpoints: (
     "sp": "screen and (max-width: 600px)",
     "tab": "screen and (min-width: 601px)",
@@ -13,7 +15,7 @@ $breakpoints: (
 
 //画面幅に合わせてpxをvwに変換する
 
-$pcDesignSize: 1920;
+$pcDesignSize: 1440;
 $tabDesignSize: 768;
 $spDesignSize: 375;
 

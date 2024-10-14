@@ -1,10 +1,22 @@
 @charset "UTF-8";
 
-// リセットCSS
-@use "foundation/reset";
+// foundation
+    // リセットCSS
+    @use "foundation/reset";
+    //ベースとなるCSS
+    @use "foundation/base";
 
-//ベースとなるCSS
-@use "foundation/base";
+//layout
+@use "layout/header" as lh;
+@use "layout/main" as lm;
+
+//project
+    @use "object/project/header" as ph;
+    @use "object/project/hamburger";
+    @use "object/project/header__menu";
+    @use "object/project/mainVisual";
 
 //compornent
-@use "object/compornent/font";
+    @use "object/compornent/grid";
+    @use "object/compornent/bg";
+    @use "object/compornent/font";

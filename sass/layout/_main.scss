@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*=======================
+メインカラム
+=======================*/
+@use "../foundation/forwords" as fw;
+
+.l-main{
+    background-color: fw.$color--white;
+}

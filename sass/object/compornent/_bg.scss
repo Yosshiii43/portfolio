@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*=======================
+背景色
+=======================*/
+@use "../../foundation/forwords" as fw;
+
+.c-bg--white{
+    background-color: fw.$color--white;
+}
+.c-bg--gray{
+    background-color: fw.$color--gray;
+}
+.c-bg--yellow{
+    background-color: fw.$color--yellow;
+}

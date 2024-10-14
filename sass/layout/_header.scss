@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*=======================
+ヘッダー
+=======================*/
+@use "../foundation/forwords" as fw;
+
+.l-header{
+    background-color: fw.$color--white;
+}
