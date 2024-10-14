@@ -10,7 +10,7 @@ body {
     width: 100%;
     margin: 0;
     background: fw.$color--white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: "Nunito","fot-tsukuardgothic-std", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6, p, figure{
     margin: 0;
     padding: 0;
     font-size: 100%;
+    font-weight: 400;//20241015追加
 }
 
 ul, ol {

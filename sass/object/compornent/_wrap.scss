@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*=============================
+各セクション汎用wrap
+=============================*/
+@use "../../foundation/forwords" as fw;
+
+.c-wrap{
+    margin: fw.sp-vw( 120 ) fw.sp-vw( 20 );
+    @include fw.mq("tab"){
+        margin: fw.tab-vw( 120 ) fw.tab-vw( 80 );
+        @include fw.mq("pc"){
+            max-width: 920px;
+            margin: fw.pc-vw( 120 ) auto;
+        }
+    }
+}

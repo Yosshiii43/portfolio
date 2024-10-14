@@ -2,7 +2,7 @@
 
 // foundation
     // リセットCSS
-    @use "foundation/reset";
+    //@use "foundation/reset";
     //ベースとなるCSS
     @use "foundation/base";
 
@@ -15,8 +15,10 @@
     @use "object/project/hamburger";
     @use "object/project/header__menu";
     @use "object/project/mainVisual";
+    @use "object/project/concept";
 
 //compornent
     @use "object/compornent/grid";
     @use "object/compornent/bg";
     @use "object/compornent/font";
+    @use "object/compornent/wrap";

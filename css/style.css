@@ -1,85 +1,4 @@
 @charset "UTF-8";
-/*=======================================================
-  リセットCSS
-  A (more) Modern CSS Reset
-  https://piccalil.li/blog/a-more-modern-css-reset/
-  =======================================================*/
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
 /*=======================
   ベースCSS
   =======================*/
@@ -88,7 +7,7 @@ body {
   width: 100%;
   margin: 0;
   background: #FFFFFF;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Nunito", "fot-tsukuardgothic-std", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -106,6 +25,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0;
   padding: 0;
   font-size: 100%;
+  font-weight: 400;
 }
 
 ul, ol {
@@ -312,7 +232,6 @@ body {
 =======================*/
 .p-mainVisual {
   position: relative;
-  background: #F7F6F6;
   height: 149.3333333333vw;
   background-size: cover;
 }
@@ -323,10 +242,10 @@ body {
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
   .p-mainVisual {
-    height: 26.8055555556vw;
+    height: 386px;
   }
 }
-.p-mainVisual .c-wrap {
+.p-mainVisual > div {
   position: absolute;
   width: 91.7333333333vw;
   height: 122.6666666667vw;
@@ -338,7 +257,7 @@ body {
   align-items: center;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual .c-wrap {
+  .p-mainVisual > div {
     width: 81.7708333333vw;
     height: 33.8541666667vw;
     top: 0;
@@ -351,44 +270,105 @@ body {
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
-  .p-mainVisual .c-wrap {
-    width: 55.5555555556vw;
-    height: 22.5vw;
+  .p-mainVisual > div {
+    width: 920px;
+    height: 324px;
+    padding: 0 60px;
   }
 }
-.p-mainVisual .c-wrap .p-mainVisual__title {
+.p-mainVisual > div .p-mainVisual__title {
   width: 45.8666666667vw;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual .c-wrap .p-mainVisual__title {
+  .p-mainVisual > div .p-mainVisual__title {
     width: 100%;
   }
 }
-.p-mainVisual .c-wrap .p-mainVisual__title__top {
+.p-mainVisual > div .p-mainVisual__title__top {
   font-size: 1.875rem;
   margin-bottom: 16vw;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual .c-wrap .p-mainVisual__title__top {
+  .p-mainVisual > div .p-mainVisual__title__top {
     font-size: 2rem;
     margin-top: inherit;
     margin-bottom: 2.0833333333vw;
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
-  .p-mainVisual .c-wrap .p-mainVisual__title__top {
+  .p-mainVisual > div .p-mainVisual__title__top {
     font-size: 2.25rem;
   }
 }
-.p-mainVisual .c-wrap .p-mainVisual__title__bottom {
+.p-mainVisual > div .p-mainVisual__title__bottom {
   font-size: 1.375rem;
   width: 37.8666666667vw;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual .c-wrap .p-mainVisual__title__bottom {
+  .p-mainVisual > div .p-mainVisual__title__bottom {
     width: inherit;
     font-size: 1.5rem;
   }
+}
+
+/*=============================
+コンセプト
+=============================*/
+.p-concept__title {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 601px) {
+  .p-concept__title {
+    font-size: 2.25rem;
+    margin-bottom: 3.125rem;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 601px) {
+  .p-concept__title {
+    margin-bottom: 3.75rem;
+  }
+}
+.p-concept__title span {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  position: relative;
+}
+@media screen and (min-width: 601px) {
+  .p-concept__title span {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+.p-concept__title span::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FAFD87;
+  border-radius: 50%;
+  filter: blur(6px);
+}
+.p-concept__title span::after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.p-concept__title span:first-child::after {
+  content: "心";
+}
+.p-concept__title span:last-child::after {
+  content: "形";
 }
 
 /*=======================
@@ -449,5 +429,23 @@ body .l-footer {
 .c-font--nunito300 {
   font-family: "Nunito";
   font-weight: 300;
+}
+
+/*=============================
+各セクション汎用wrap
+=============================*/
+.c-wrap {
+  margin: 32vw 5.3333333333vw;
+}
+@media screen and (min-width: 601px) {
+  .c-wrap {
+    margin: 15.625vw 10.4166666667vw;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .c-wrap {
+    max-width: 920px;
+    margin: 8.3333333333vw auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
