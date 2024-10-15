@@ -6,4 +6,11 @@
 
 .l-main{
     background-color: fw.$color--white;
+    padding-top: 83px;//ヘッダーにposition:fixdを指定しているので、ヘッダーの高さ分
+    @include fw.mq("tab"){
+        padding-top: 85px;
+        @include fw.mq("pc"){
+            padding-top: 91px;
+        }
+    }
 }

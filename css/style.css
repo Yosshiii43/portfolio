@@ -7,7 +7,7 @@ body {
   width: 100%;
   margin: 0;
   background: #FFFFFF;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: "Nunito", "fot-tsukuardgothic-std", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -41,7 +41,22 @@ a {
 ヘッダー
 =======================*/
 .l-header {
-  background-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 1000;
+  height: 83px;
+}
+@media screen and (min-width: 601px) {
+  .l-header {
+    height: 85px;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .l-header {
+    height: 91px;
+  }
 }
 
 /*=======================
@@ -49,6 +64,17 @@ a {
 =======================*/
 .l-main {
   background-color: #FFFFFF;
+  padding-top: 83px;
+}
+@media screen and (min-width: 601px) {
+  .l-main {
+    padding-top: 85px;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .l-main {
+    padding-top: 91px;
+  }
 }
 
 /*=======================
@@ -87,9 +113,9 @@ a {
 .p-hamburger {
   width: 50px;
   height: 50px;
-  background-color: #FFFFFF;
   border: none;
   position: relative;
+  z-index: 500;
 }
 @media screen and (min-width: 601px) {
   .p-hamburger {
@@ -142,10 +168,6 @@ body.is-open {
 /*=======================
 グローバルナビ
 =======================*/
-body {
-  overflow-x: hidden;
-}
-
 .p-header__menu {
   height: 50px;
   position: relative;
@@ -159,9 +181,9 @@ body {
   transition: all 300ms 0s ease;
   width: 42.6666666667vw;
   height: 100vh;
-  padding: 20px 0 0;
+  padding: 83px 0 0;
   position: fixed;
-  top: 64px;
+  top: 0;
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -234,6 +256,7 @@ body {
   position: relative;
   height: 149.3333333333vw;
   background-size: cover;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 601px) {
   .p-mainVisual {
@@ -242,10 +265,10 @@ body {
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
   .p-mainVisual {
-    height: 386px;
+    height: 26.8055555556vw;
   }
 }
-.p-mainVisual > div {
+.p-mainVisual > div:first-child {
   position: absolute;
   width: 91.7333333333vw;
   height: 122.6666666667vw;
@@ -257,7 +280,7 @@ body {
   align-items: center;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual > div {
+  .p-mainVisual > div:first-child {
     width: 81.7708333333vw;
     height: 33.8541666667vw;
     top: 0;
@@ -270,42 +293,41 @@ body {
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
-  .p-mainVisual > div {
-    width: 920px;
-    height: 324px;
-    padding: 0 60px;
+  .p-mainVisual > div:first-child {
+    width: 55.5555555556vw;
+    height: 22.5vw;
   }
 }
-.p-mainVisual > div .p-mainVisual__title {
+.p-mainVisual > div:first-child .p-mainVisual__title {
   width: 45.8666666667vw;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual > div .p-mainVisual__title {
+  .p-mainVisual > div:first-child .p-mainVisual__title {
     width: 100%;
   }
 }
-.p-mainVisual > div .p-mainVisual__title__top {
+.p-mainVisual > div:first-child .p-mainVisual__title__top {
   font-size: 1.875rem;
   margin-bottom: 16vw;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual > div .p-mainVisual__title__top {
+  .p-mainVisual > div:first-child .p-mainVisual__title__top {
     font-size: 2rem;
     margin-top: inherit;
     margin-bottom: 2.0833333333vw;
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
-  .p-mainVisual > div .p-mainVisual__title__top {
+  .p-mainVisual > div:first-child .p-mainVisual__title__top {
     font-size: 2.25rem;
   }
 }
-.p-mainVisual > div .p-mainVisual__title__bottom {
+.p-mainVisual > div:first-child .p-mainVisual__title__bottom {
   font-size: 1.375rem;
   width: 7em;
 }
 @media screen and (min-width: 601px) {
-  .p-mainVisual > div .p-mainVisual__title__bottom {
+  .p-mainVisual > div:first-child .p-mainVisual__title__bottom {
     width: inherit;
     font-size: 1.5rem;
   }
@@ -378,32 +400,77 @@ body {
   content: "形";
 }
 
+/*=============================
+ギャラリー表示
+=============================*/
+.p-service__inner__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (min-width: 601px) {
+  .p-service__inner__gallery {
+    justify-content: space-between;
+  }
+}
+.p-service__inner__gallery > section {
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .p-service__inner__gallery > section {
+    margin-bottom: inherit;
+  }
+}
+@media screen and (min-width: 601px) {
+  .p-service__inner__gallery > section:last-child {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: inherit;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-service__inner__gallery > section:last-child {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+}
+.p-service .p-service__inner:first-of-type {
+  margin-bottom: 3.75rem;
+}
+
 /*=======================
-グリッド
+サービスのカード
 =======================*/
-body {
-  display: grid;
-  gap: 0;
-  box-sizing: border-box;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+.p-serviceCard {
+  width: 17.5rem;
+}
+.p-serviceCard__icon {
+  width: 32vw;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin: 0 auto 3.2vw;
+}
+@media screen and (min-width: 601px) {
+  .p-serviceCard__icon {
+    width: 15.625vw;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-serviceCard__icon {
+    width: 8.3333333333vw;
+  }
+}
+.p-serviceCard h4 {
+  font-size: 1.1875rem;
+  text-align: center;
+  margin-bottom: 0.625rem;
 }
 
-body .l-header {
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-
-body .l-main {
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-
-body .l-footer {
-  grid-row: 3/4;
-  grid-column: 1/2;
+/*=======================
+body
+=======================*/
+.c-body {
+  overflow-x: hidden;
 }
 
 /*=======================
@@ -442,17 +509,18 @@ body .l-footer {
 各セクション汎用wrap
 =============================*/
 .c-wrap {
-  margin: 32vw 5.3333333333vw;
+  padding: 32vw 5.3333333333vw;
 }
 @media screen and (min-width: 601px) {
   .c-wrap {
-    margin: 15.625vw 10.4166666667vw;
+    padding: 15.625vw 10.4166666667vw;
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
   .c-wrap {
     max-width: 920px;
-    margin: 8.3333333333vw auto;
+    padding: 8.3333333333vw 0;
+    margin: 0 auto;
   }
 }
 
@@ -461,5 +529,59 @@ body .l-footer {
 ============================*/
 .randomAnime {
   visibility: hidden;
+}
+
+/*============================
+小見出し（c-title）
+============================*/
+.c-title--h2 {
+  font-size: 2.375rem;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+.c-title--h2::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #FAFD87;
+  margin-bottom: 0.3em;
+  margin-right: -0.3em;
+}
+
+.c-title--h3 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.c-title--h3::before, .c-title--h3::after {
+  border-top: 1px solid;
+  content: "";
+  width: 2.5rem;
+}
+.c-title--h3::before {
+  margin-right: 1em;
+}
+.c-title--h3::after {
+  margin-left: 1em;
+}
+
+/*=============================
+フェードインアニメーション
+=============================*/
+.c-fadeIn {
+  opacity: 0; /* 初期値は透明にしておく */
+  transition: 1s; /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px; /* 事前に下に50pxずらしておく */
+}
+
+.c-fadeIn--active {
+  opacity: 1; /* 透明度を元に戻す */
+  top: 0; /* ずらしていた位置を戻すことで上に上がっているようにみえる */
 }
 /*# sourceMappingURL=style.css.map */

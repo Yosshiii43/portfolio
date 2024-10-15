@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*============================
+小見出し（c-title）
+============================*/
+@use "../../foundation/forwords" as fw;
+
+.c-title--h2{
+    font-size: fw.rem( 38 );
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: fw.rem( 60 );
+    &::before{
+        content: "";
+        display: inline-block;
+        width: fw.rem(24);
+        height: fw.rem(24);
+        border-radius: 50%;
+        background: fw.$color--yellow;
+        margin-bottom: 0.3em;
+        margin-right: -0.3em;
+    }
+}
+
+.c-title--h3{
+    font-size: fw.rem( 24 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: fw.rem( 40 );
+    &::before,
+    &::after{
+        border-top: 1px solid;
+        content: "";
+        width: fw.rem( 40 );
+    }
+    &::before{
+        margin-right: 1em;
+    }
+    &::after{
+        margin-left: 1em;
+    }
+}

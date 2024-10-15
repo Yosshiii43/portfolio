@@ -5,5 +5,15 @@
 @use "../foundation/forwords" as fw;
 
 .l-header{
-    background-color: fw.$color--white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 1000;
+    height: 83px;
+    @include fw.mq("tab"){
+        height: 85px;
+        @include fw.mq("pc"){
+            height: 91px;
+        }
+    }
 }

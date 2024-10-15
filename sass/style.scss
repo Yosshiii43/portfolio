@@ -16,10 +16,15 @@
     @use "object/project/header__menu";
     @use "object/project/mainVisual";
     @use "object/project/concept";
+    @use "object/project/service";
+    @use "object/project/serviceCard";
 
 //compornent
-    @use "object/compornent/grid";
+    //@use "object/compornent/grid";
+    @use "object/compornent/body";
     @use "object/compornent/bg";
     @use "object/compornent/font";
     @use "object/compornent/wrap";
     @use "object/compornent/randomAnime";
+    @use "object/compornent/title";
+    @use "object/compornent/fadeIn";

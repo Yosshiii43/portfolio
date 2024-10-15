@@ -9,13 +9,14 @@
     position: relative;
     height: fw.sp-vw( 560 );
     background-size: cover;
+    overflow-x: hidden;
     @include fw.mq( "tab" ){
         height: fw.tab-vw( 308 );
         @include fw.mq( "pc" ){
-            height:386px;
+            height: fw.pc-vw( 386 );
         }
     }
-    > div{
+    > div:first-child{
         position: absolute;
         width: fw.sp-vw( 344 );
         height: fw.sp-vw( 460 );
@@ -36,9 +37,8 @@
             background: url(../../../img/mainVisual__img--pctab.png) no-repeat center right;
             background-size: contain;
             @include fw.mq("pc"){
-                width: 920px;
-                height: 324px;
-                padding: 0 60px;
+                width: fw.pc-vw( 800 );
+                height: fw.pc-vw( 324 );
             }
         }
         .p-mainVisual__title{

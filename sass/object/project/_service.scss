@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*=============================
+ギャラリー表示
+=============================*/
+@use "../../foundation/forwords" as fw;
+.p-service{
+    &__inner{
+        &__gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            @include fw.mq("tab"){
+                justify-content: space-between;
+            }
+            > section {
+                margin-bottom: fw.rem( 40 );//カードの下の空き
+                @include fw.mq("pc"){
+                    margin-bottom: inherit;//PCは１列なので空き無し
+                }
+            }
+            > section:last-child{
+                @include fw.mq("tab"){
+                margin-left: auto;//最後の1個を横位置中央にする
+                margin-right: auto;//最後の1個を横位置中央にする
+                margin-bottom: inherit;//最後の要素だけした空き無し
+                    @include fw.mq("pc"){
+                        margin-left: inherit;//最後の1個を横位置中央にするための指示を取り消し
+                        margin-right: inherit;//最後の1個を横位置中央にするための指示を取り消し
+                    }
+                }
+            }
+        }
+    }
+    .p-service__inner:first-of-type{
+        margin-bottom: fw.rem( 60 );
+    }
+}

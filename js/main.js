@@ -1,4 +1,4 @@
-//ハンバーガーメニュー
+////ハンバーガーメニュー////
 document.querySelector( '.js-hamburger' ).addEventListener(
 	'click',
 	() => {
@@ -8,7 +8,8 @@ document.querySelector( '.js-hamburger' ).addEventListener(
 	}
 );
 
-//テキストのランダムアニメーション
+
+////テキストのランダムアニメーション////
 var Obj = {
 	loop: false,
 	minDisplayTime: 2000,// アニメーションの間隔時間
@@ -46,3 +47,16 @@ $(window).on('load', function () {
 	RandomInit(); /*初期設定を読み込み*/
 	RandomAnimeControl();/*アニメーション用の関数を呼ぶ*/
 });//ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+
+//要素の下からのフェードイン
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+	var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+	var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+	$('.js-fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+	  var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+	  if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+		$(this).addClass('c-fadeIn--active');              /* 「active」のクラスを付与 */
+	  }
+	});
+  });

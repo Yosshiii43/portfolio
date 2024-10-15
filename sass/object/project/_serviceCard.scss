@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*=======================
+サービスのカード
+=======================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-serviceCard{
+    width: fw.rem( 280 );
+    &__icon{
+        width: fw.sp-vw( 120 );
+        background: fw.$color--white;
+        border-radius: 50%;
+        margin: 0 auto fw.sp-vw( 12 );
+        @include fw.mq("tab"){
+            width: fw.tab-vw( 120 );
+            @include fw.mq("pc"){
+                width: fw.pc-vw( 120 );
+            }
+        }
+    }
+    h4{
+        font-size: fw.rem( 19 );
+        text-align: center;
+        margin-bottom: fw.rem( 10 );
+    }
+}
