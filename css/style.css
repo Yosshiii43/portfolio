@@ -162,7 +162,7 @@ a {
 }
 
 body.is-open {
-  position: fixed;
+  overflow: hidden;
 }
 
 /*=======================

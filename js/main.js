@@ -8,6 +8,33 @@ document.querySelector( '.js-hamburger' ).addEventListener(
 	}
 );
 
+////スムーススクロール////
+$(function(){
+	var headerHeight = $('header').outerHeight(); // ヘッダーの高さ取得
+	var urlHash = location.hash; // ハッシュ値があればページ内スクロール
+	if(urlHash) { // 外部リンクからのクリック時
+	  $('body,html').stop().scrollTop(0); // スクロールを0に戻す
+	  setTimeout(function(){ // ロード時の処理を待ち、時間差でスクロール実行
+		var target = $(urlHash);
+		var position = target.offset().top - headerHeight;
+		$('body,html').stop().animate({scrollTop:position}, 500); // スクロール速度ミリ秒
+	  }, 100);
+	}
+	$('a[href^="#"]').click(function(){ // 通常のクリック時
+	  var href= $(this).attr("href"); // ページ内リンク先を取得
+	  var target = $(href);
+	  var position = target.offset().top - headerHeight;
+	  $('body,html').stop().animate({scrollTop:position}, 500); // スクロール速度ミリ秒
+
+	// SP用のメニューを閉じる処理
+	document.querySelector('.js-hamburger').classList.remove('is-open');
+	document.querySelector('.p-header__menu').classList.remove('is-open');
+	document.querySelector('body').classList.remove('is-open');
+
+	  return false; // #付与なし、付与したい場合は、true
+	});
+  });
+
 
 ////テキストのランダムアニメーション////
 var Obj = {
@@ -49,7 +76,7 @@ $(window).on('load', function () {
 });//ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
-//要素の下からのフェードイン
+////要素の下からのフェードイン////
 $(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
 	var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
 	var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */

@@ -61,5 +61,5 @@ $btnHeight: 1px;
 }
 
 body.is-open{
-    position: fixed;
+    overflow: hidden; //position: fixed;ではSP時にページトップに戻ってしまうため変更
 }
