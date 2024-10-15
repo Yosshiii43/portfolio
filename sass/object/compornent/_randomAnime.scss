@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*============================
+テキストの動き　ランダムに出現
+============================*/
+@use "../../foundation/forwords" as fw;
+
+.randomAnime {
+	visibility: hidden;
+}

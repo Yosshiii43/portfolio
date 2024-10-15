@@ -302,13 +302,20 @@ body {
 }
 .p-mainVisual > div .p-mainVisual__title__bottom {
   font-size: 1.375rem;
-  width: 37.8666666667vw;
+  width: 7em;
 }
 @media screen and (min-width: 601px) {
   .p-mainVisual > div .p-mainVisual__title__bottom {
     width: inherit;
     font-size: 1.5rem;
   }
+}
+
+.p-mainVisual__title__bottom span.word1 .char1, .p-mainVisual__title__bottom span.word1 .char2, .p-mainVisual__title__bottom span.word1 .char3 {
+  font-weight: 200;
+}
+.p-mainVisual__title__bottom span.word2 .char1 {
+  font-weight: 200;
 }
 
 /*=============================
@@ -447,5 +454,12 @@ body .l-footer {
     max-width: 920px;
     margin: 8.3333333333vw auto;
   }
+}
+
+/*============================
+テキストの動き　ランダムに出現
+============================*/
+.randomAnime {
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */
