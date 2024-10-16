@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*=============================
+Worksのカード
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-worksCard{
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    position: relative;
+    @include fw.mq("tab"){
+        width: calc(calc(100% - 40px) / 2);//カードの間隔40pxの時
+        @include fw.mq("pc"){
+            width: calc(calc(100% - 40px * 2) / 3);
+        }
+    }
+    &__tags{
+        font-size: fw.rem( 14 );
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        p{
+            font-size: fw.rem( 14 );
+            font-weight: 300;
+            &::before{//黄色のサークル
+                width: fw.rem(12);
+                height: fw.rem(12);
+            }
+        }
+    }
+    > p img{
+        border-radius: 4px;
+    }
+}

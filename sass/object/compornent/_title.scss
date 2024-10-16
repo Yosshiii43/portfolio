@@ -4,20 +4,25 @@
 ============================*/
 @use "../../foundation/forwords" as fw;
 
-.c-title--h2{
+.c-title--circle{
+    &::before{
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        background: fw.$color--yellow;
+        margin-bottom: 0.3em;
+        margin-right: -0.3em;
+    }
+}
+
+.c-title--h2{//.c-title--circleと併用する
     font-size: fw.rem( 38 );
     font-weight: 200;
     text-align: center;
     margin-bottom: fw.rem( 60 );
     &::before{
-        content: "";
-        display: inline-block;
-        width: fw.rem(24);
-        height: fw.rem(24);
-        border-radius: 50%;
-        background: fw.$color--yellow;
-        margin-bottom: 0.3em;
-        margin-right: -0.3em;
+        width: fw.rem(24);//黄色のサークルの幅
+        height: fw.rem(24);//黄色のサークルの高さ
     }
 }
 

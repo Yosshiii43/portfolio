@@ -7,9 +7,9 @@ body {
   width: 100%;
   margin: 0;
   background: #FFFFFF;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "Nunito", "fot-tsukuardgothic-std", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   color: #333333;
   line-height: 1.5;
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 ul, ol {
@@ -425,15 +425,13 @@ body.is-open {
 }
 @media screen and (min-width: 601px) {
   .p-service__inner__gallery > section:last-child {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     margin-bottom: inherit;
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
   .p-service__inner__gallery > section:last-child {
-    margin-left: inherit;
-    margin-right: inherit;
+    margin-inline: inherit;
   }
 }
 .p-service .p-service__inner:first-of-type {
@@ -466,6 +464,99 @@ body.is-open {
   font-size: 1.1875rem;
   text-align: center;
   margin-bottom: 0.625rem;
+}
+
+/*=======================
+Works
+=======================*/
+.p-works__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.125rem 1.125rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 601px) {
+  .p-works__menu {
+    gap: 1.5rem 1.5rem;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-works__menu {
+    gap: 2rem 2rem;
+  }
+}
+.p-works__menu__item {
+  font-size: 1.1875rem;
+}
+@media screen and (min-width: 601px) {
+  .p-works__menu__item {
+    font-size: 1.25rem;
+  }
+}
+.p-works__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  gap: 40px;
+}
+@media screen and (min-width: 601px) {
+  .p-works__gallery {
+    justify-content: space-between;
+  }
+}
+.p-works__more {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.p-works__more::after {
+  content: "";
+  background: url(../../../img/ico_arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 0.875rem;
+  height: 0.875rem;
+  position: absolute;
+  top: 1.875rem;
+  left: calc(50% - 0.4375rem);
+}
+
+/*=============================
+Worksのカード
+=============================*/
+.p-worksCard {
+  width: 100%;
+  aspect-ratio: 5/4;
+  position: relative;
+}
+@media screen and (min-width: 601px) {
+  .p-worksCard {
+    width: calc((100% - 40px) / 2);
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-worksCard {
+    width: calc((100% - 80px) / 3);
+  }
+}
+.p-worksCard__tags {
+  font-size: 0.875rem;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.p-worksCard__tags p {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.p-worksCard__tags p::before {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.p-worksCard > p img {
+  border-radius: 4px;
 }
 
 /*=======================
@@ -536,6 +627,15 @@ body
 /*============================
 小見出し（c-title）
 ============================*/
+.c-title--circle::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  background: #FAFD87;
+  margin-bottom: 0.3em;
+  margin-right: -0.3em;
+}
+
 .c-title--h2 {
   font-size: 2.375rem;
   font-weight: 200;
@@ -543,14 +643,8 @@ body
   margin-bottom: 3.75rem;
 }
 .c-title--h2::before {
-  content: "";
-  display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 50%;
-  background: #FAFD87;
-  margin-bottom: 0.3em;
-  margin-right: -0.3em;
 }
 
 .c-title--h3 {
@@ -577,7 +671,7 @@ body
 =============================*/
 .c-fadeIn {
   opacity: 0; /* 初期値は透明にしておく */
-  transition: 1s; /* 動くスピードを0.5秒に指定 */
+  transition: 0.75s; /* 動くスピードを0.5秒に指定 */
   position: relative; /* 相対位置の設定 */
   top: 50px; /* 事前に下に50pxずらしておく */
 }

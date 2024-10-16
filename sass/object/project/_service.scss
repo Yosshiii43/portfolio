@@ -20,12 +20,10 @@
             }
             > section:last-child{
                 @include fw.mq("tab"){
-                margin-left: auto;//最後の1個を横位置中央にする
-                margin-right: auto;//最後の1個を横位置中央にする
-                margin-bottom: inherit;//最後の要素だけした空き無し
+                margin-inline: auto; //最後の1個を横位置中央にする
+                margin-bottom: inherit;//最後の要素だけ下空き無し
                     @include fw.mq("pc"){
-                        margin-left: inherit;//最後の1個を横位置中央にするための指示を取り消し
-                        margin-right: inherit;//最後の1個を横位置中央にするための指示を取り消し
+                        margin-inline: inherit;//最後の1個を横位置中央にするための指示を取り消し
                     }
                 }
             }

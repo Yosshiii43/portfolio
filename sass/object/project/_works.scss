@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*=======================
+Works
+=======================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-works{
+    &__menu{
+        display: flex;
+        flex-wrap: wrap;
+        gap: fw.rem( 18 ) fw.rem( 18 );
+        justify-content: center;
+        margin-bottom: fw.rem( 40 );
+        @include fw.mq(tab){
+            gap: fw.rem( 24 ) fw.rem( 24 );
+            @include fw.mq("pc"){
+                gap: fw.rem( 32 ) fw.rem( 32 );
+            }
+        }
+        &__item{
+            font-size: fw.rem( 19 );
+            @include fw.mq(tab){
+                font-size: fw.rem( 20 );
+            }
+        }
+    }
+    &__gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: fw.rem( 40 );
+        gap: 40px;
+        @include fw.mq("tab"){
+            justify-content: space-between;
+        }
+    }
+    &__more{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        &::after{
+            content: "";
+            background: url(../../../img/ico_arrow.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: fw.rem( 14 );
+            height: fw.rem( 14 );
+            position: absolute;
+            top: fw.rem( 30 );
+            left: calc( 50% - math.div( fw.rem( 14 ) , 2));
+        }
+    }
+}
