@@ -6,7 +6,7 @@ Worksのカード
 @use "sass:math";
 
 .p-about{
-    &__content{
+    .c-wrap .c-inner{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -15,7 +15,7 @@ Worksのカード
             justify-content: space-around;
             align-items: flex-end;
         }
-        &__text{
+        .p-about__text{
             @include fw.mq("pc"){
                 flex-basis: 47.8%;
             }
@@ -23,7 +23,7 @@ Worksのカード
                 font-size: fw.rem( 24 );
             }
         }
-        &__img{
+        .p-about__img{
             width: fw.sp-vw( 220 );
             margin: fw.rem( 40 ) auto 0;
             @include fw.mq("tab"){

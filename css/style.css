@@ -539,40 +539,80 @@ Worksのカード
 /*=============================
 Worksのカード
 =============================*/
-.p-about__content {
+.p-about .c-wrap .c-inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media screen and (min-width: 1024px) {
-  .p-about__content {
+  .p-about .c-wrap .c-inner {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
   }
 }
 @media screen and (min-width: 1024px) {
-  .p-about__content__text {
+  .p-about .c-wrap .c-inner .p-about__text {
     flex-basis: 47.8%;
   }
 }
-.p-about__content__text p:first-child {
+.p-about .c-wrap .c-inner .p-about__text p:first-child {
   font-size: 1.5rem;
 }
-.p-about__content__img {
+.p-about .c-wrap .c-inner .p-about__img {
   width: 58.6666666667vw;
   margin: 2.5rem auto 0;
 }
 @media screen and (min-width: 601px) {
-  .p-about__content__img {
+  .p-about .c-wrap .c-inner .p-about__img {
     width: 33.8541666667vw;
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
-  .p-about__content__img {
+  .p-about .c-wrap .c-inner .p-about__img {
     flex-basis: 34.8%;
     margin: inherit;
   }
+}
+
+/*=============================
+Flow
+=============================*/
+.p-flow__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem 0;
+  padding: 1.25rem 2rem;
+  border-radius: 8px;
+}
+@media screen and (min-width: 601px) {
+  .p-flow__item {
+    padding: 1.25rem 2.5rem;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-flow__item {
+    flex-direction: row;
+    gap: 0 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+.p-flow__item h3 {
+  font-size: 1.1875rem;
+}
+@media screen and (min-width: 1024px) {
+  .p-flow__item h3 {
+    width: 14em;
+  }
+}
+.p-flow__item__text {
+  flex: 1;
+}
+.p-flow__arrow {
+  width: 1.25rem;
+  height: auto;
+  margin: 1.25rem auto;
 }
 
 /*=======================
@@ -663,23 +703,35 @@ body
   height: 1.5rem;
 }
 
-.c-title--h3 {
+.c-title--horizontalLine {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2.5rem;
 }
-.c-title--h3::before, .c-title--h3::after {
+.c-title--horizontalLine::before, .c-title--horizontalLine::after {
   border-top: 1px solid;
   content: "";
   width: 2.5rem;
 }
-.c-title--h3::before {
+.c-title--horizontalLine::before {
   margin-right: 1em;
 }
-.c-title--h3::after {
+.c-title--horizontalLine::after {
   margin-left: 1em;
+}
+
+.c-title--circleNumber {
+  font-size: 0.9em;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  line-height: 1.2em;
+  background: #FAFD87;
+  border-radius: 50%;
+  margin-right: 0.5em;
 }
 
 /*=============================

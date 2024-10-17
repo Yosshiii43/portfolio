@@ -26,7 +26,7 @@
     }
 }
 
-.c-title--h3{
+.c-title--horizontalLine{
     font-size: fw.rem( 24 );
     display: flex;
     align-items: center;
@@ -44,4 +44,16 @@
     &::after{
         margin-left: 1em;
     }
+}
+
+.c-title--circleNumber{
+    font-size: 0.9em;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    text-align: center;
+    line-height: 1.2em;
+    background: fw.$color--yellow;
+    border-radius: 50%;
+    margin-right: 0.5em;
 }

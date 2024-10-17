@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*=============================
+Flow
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-flow{
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap:fw.rem( 12 ) 0;
+        padding: fw.rem( 20 ) fw.rem( 32 );
+        border-radius: 8px;
+        @include fw.mq("tab"){
+            padding: fw.rem( 20 ) fw.rem( 40 );
+            @include fw.mq("pc"){
+                flex-direction: row;
+                gap: 0 fw.rem( 32 );
+                max-width: 720px;
+                margin: 0 auto;
+            }
+        }
+        h3{
+            font-size: fw.rem( 19 );
+            @include fw.mq("pc"){
+                width: 14em;
+            }
+        }
+        &__text{
+            flex:1;//残りの幅で伸縮
+        }
+    }
+    &__arrow{
+        width: fw.rem( 20 );
+        height: auto;
+        margin: fw.rem( 20 ) auto;
+    }
+}
