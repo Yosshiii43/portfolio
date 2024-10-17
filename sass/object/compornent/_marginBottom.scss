@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*=============================
+margin-bottom
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.c-matginBottom--1em{
+    margin-bottom: 1em;
+}

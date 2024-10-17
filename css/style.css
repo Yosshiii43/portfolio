@@ -405,36 +405,13 @@ body.is-open {
 /*=============================
 ギャラリー表示
 =============================*/
-.p-service__inner__gallery {
+.p-service__content__gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 40px;
 }
-@media screen and (min-width: 601px) {
-  .p-service__inner__gallery {
-    justify-content: space-between;
-  }
-}
-.p-service__inner__gallery > section {
-  margin-bottom: 2.5rem;
-}
-@media screen and (min-width: 1024px) {
-  .p-service__inner__gallery > section {
-    margin-bottom: inherit;
-  }
-}
-@media screen and (min-width: 601px) {
-  .p-service__inner__gallery > section:last-child {
-    margin-inline: auto;
-    margin-bottom: inherit;
-  }
-}
-@media screen and (min-width: 601px) and (min-width: 1024px) {
-  .p-service__inner__gallery > section:last-child {
-    margin-inline: inherit;
-  }
-}
-.p-service .p-service__inner:first-of-type {
+.p-service .p-service__content:first-of-type {
   margin-bottom: 3.75rem;
 }
 
@@ -533,12 +510,12 @@ Worksのカード
 }
 @media screen and (min-width: 601px) {
   .p-worksCard {
-    width: calc((100% - 40px) / 2);
+    width: calc(calc(100% - 40px)/2);
   }
 }
 @media screen and (min-width: 601px) and (min-width: 1024px) {
   .p-worksCard {
-    width: calc((100% - 80px) / 3);
+    width: calc(calc(100% - 80px)/3);
   }
 }
 .p-worksCard__tags {
@@ -557,6 +534,45 @@ Worksのカード
 }
 .p-worksCard > p img {
   border-radius: 4px;
+}
+
+/*=============================
+Worksのカード
+=============================*/
+.p-about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .p-about__content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .p-about__content__text {
+    flex-basis: 47.8%;
+  }
+}
+.p-about__content__text p:first-child {
+  font-size: 1.5rem;
+}
+.p-about__content__img {
+  width: 58.6666666667vw;
+  margin: 2.5rem auto 0;
+}
+@media screen and (min-width: 601px) {
+  .p-about__content__img {
+    width: 33.8541666667vw;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-about__content__img {
+    flex-basis: 34.8%;
+    margin: inherit;
+  }
 }
 
 /*=======================
@@ -679,5 +695,12 @@ body
 .c-fadeIn--active {
   opacity: 1; /* 透明度を元に戻す */
   top: 0; /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+}
+
+/*=============================
+margin-bottom
+=============================*/
+.c-matginBottom--1em {
+  margin-bottom: 1em;
 }
 /*# sourceMappingURL=style.css.map */

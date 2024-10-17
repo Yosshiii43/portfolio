@@ -20,6 +20,7 @@
     @use "object/project/serviceCard";
     @use "object/project/works";
     @use "object/project/worksCard";
+    @use "object/project/about";
 
 //compornent
     //@use "object/compornent/grid";
@@ -30,3 +31,4 @@
     @use "object/compornent/randomAnime";
     @use "object/compornent/title";
     @use "object/compornent/fadeIn";
+    @use "object/compornent/marginBottom";

@@ -61,10 +61,10 @@
         <section class="p-service c-bg--gray" id="service">
             <div class="c-wrap">
                 <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Service</h2>
-                <section class="p-service__inner">
+                <section class="p-service__content">
                     <h3 class="c-title--h3 c-fadeIn js-fadeIn">デザイン</h3>
-                    <div class="p-service__inner__gallery">
-                        <section class="p-serviceCard c-fadeIn js-fadeIn">
+                    <div class="p-service__content__gallery c-fadeIn js-fadeIn">
+                        <section class="p-serviceCard">
                             <a href="#">
                                 <p class="p-serviceCard__icon">
                                     <img src="./img/ico_webdesign.png" alt="Webデザインのイラスト" width="500px" height="500px">
@@ -73,7 +73,7 @@
                                 <p class="p-serviceCard__caption">ユーザーに響くデザインで、Webサイトやランディングページの効果を最大化します。レスポンシブ対応であらゆるデバイスに最適化します。</p>
                             </a>
                         </section>
-                        <section class="p-serviceCard c-fadeIn js-fadeIn">
+                        <section class="p-serviceCard">
                             <a href="#">
                                 <p class="p-serviceCard__icon">
                                     <img src="./img/ico_sns.png" alt="SNS関連デザインのイラスト" width="500px" height="500px">
@@ -82,7 +82,7 @@
                                 <p class="p-serviceCard__caption">LINEのリッチメニューやリッチ画像のデザイン、SNS広告やInstagram投稿フォーマットのデザインを通じて、企業のメッセージを効果的に伝えます。</p>
                             </a>
                         </section>
-                        <section class="p-serviceCard c-fadeIn js-fadeIn">
+                        <section class="p-serviceCard">
                             <a href="#">
                                 <p class="p-serviceCard__icon">
                                     <img src="./img/ico_namecard.png" alt="名刺・ショップカードデザインのイラスト" width="500px" height="500px">
@@ -93,10 +93,10 @@
                         </section>
                     </div>
                 </section>
-                <section class="p-service__inner">
+                <section class="p-service__content">
                     <h3 class="c-title--h3 c-fadeIn js-fadeIn">コーディング</h3>
-                    <div class="p-service__inner__gallery">
-                        <section class="p-serviceCard c-fadeIn js-fadeIn">
+                    <div class="p-service__content__gallery c-fadeIn js-fadeIn">
+                        <section class="p-serviceCard">
                             <a href="#">
                                 <p class="p-serviceCard__icon">
                                     <img src="./img/ico_coding.png" alt="フロントエンドコーディングのイラスト" width="500px" height="500px">
@@ -106,7 +106,7 @@
                                     SASSを用いて、効率的でメンテナンス性の高いコーディングを致します。</p>
                             </a>
                         </section>
-                        <section class="p-serviceCard c-fadeIn js-fadeIn">
+                        <section class="p-serviceCard">
                             <a href="#">
                                 <p class="p-serviceCard__icon">
                                     <img src="./img/Ico_responsive.png" alt="レスポンシブデザイン対応のイラスト" width="500px" height="500px">
@@ -115,7 +115,7 @@
                                 <p class="p-serviceCard__caption">PC、タブレット、スマートフォンなど、あらゆるデバイスで快適に閲覧できるレスポンシブデザインに対応しています。また、ユーザーが直感的に操作できるウェブサイトを目指します。</p>
                             </a>
                         </section>
-                        <section class="p-serviceCard c-fadeIn js-fadeIn">
+                        <section class="p-serviceCard">
                             <a href="#">
                                 <p class="p-serviceCard__icon">
                                     <img src="./img/ico_wordpress.png" alt="WordPress構築のイラスト" width="500px" height="500px">
@@ -125,10 +125,10 @@
                                     オリジナルテーマによるWordPressサイト構築が可能です。</p>
                             </a>
                         </section>
-                    </div>
-                </section>
-            </div>
-        </section>
+                    </div><!--p-service__content__gallery-->
+                </section><!--p-service__content-->
+            </div><!--c-wrap-->
+        </section><!--p-service-->
         <section class="p-works" id="works">
             <div class="c-wrap">
                 <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Works</h2>
@@ -201,8 +201,28 @@
                     </div>
                 </div><!--p-works__gallery-->
                 <button class="p-works__more">もっと見る</button>
-            </div>
-        </section>
+            </div><!--c-wrap-->
+        </section><!--p-Works-->
+        <section class="p-about c-bg--gray" id="about">
+            <div class="c-wrap">
+                <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">About</h2>
+                <div class="p-about__content">
+                    <div class="p-about__content__text">
+                        <p class="p-about_content__text_name c-matginBottom--1em">Yoshino</p>
+                        <p class="c-matginBottom--1em">愛知県在住</p>
+                        <p class="c-matginBottom--1em">Webデザイナー / コーダー</p>
+                        <p>　スイーツが大好きで、長く洋菓子店で働いていました。</p>
+                        <p class="c-matginBottom--1em">　新商品のおすすめやお客様へのメッセージなどを日々黒板に描いてお客様が反応してくれる様子をみているうちに、ビジュアルで魅力を伝える仕事に興味が湧き、Web制作の世界に飛び込みました。</p>
+                        <p>　商品やサービスの魅力が伝わり、誰かの心を揺さぶる。そしてそれが集客や売り上げにつながる。そんなデザインを求めて制作に励んでいます。</p>
+                        <p class="c-matginBottom--1em">　また、より操作性が良く、メンテナンス性も良いサイト構築ができるよう、コーダーとしても日々勉強の毎日です。</p>
+                        <p>　折りたたみの小さな自転車BROMPTONに乗って、甘いものを食べに出かけることが、最近のお気に入りです。</p>
+                    </div>
+                    <div class="p-about__content__img">
+                        <img src="./img/portrait_sit.png" alt="Yoshinoイラスト" width="1500px" height="1444px">
+                    </div>
+                </div><!--"p-about__content-->
+            </div><!--c-wrap-->
+        </section><!--p-about-->
     </main>
     <footer class="c-bg--yellow">
         <p>フッター</p>

@@ -10,9 +10,9 @@ Worksのカード
     aspect-ratio: 5 / 4;
     position: relative;
     @include fw.mq("tab"){
-        width: calc(calc(100% - 40px) / 2);//カードの間隔40pxの時
+        width: calc( math.div(calc(100% - 40px) , 2));//カードの間隔40pxの時
         @include fw.mq("pc"){
-            width: calc(calc(100% - 40px * 2) / 3);
+            width: calc( math.div(calc(100% - 40px * 2) , 3));
         }
     }
     &__tags{
