@@ -343,7 +343,7 @@ body.is-open {
 }
 
 /*=============================
-コンセプト
+フロントページ　Conceptセクション
 =============================*/
 .p-concept__title {
   font-size: 1.75rem;
@@ -403,7 +403,7 @@ body.is-open {
 }
 
 /*=============================
-ギャラリー表示
+フロントページ　Serviceセクション
 =============================*/
 .p-service__content__gallery {
   display: flex;
@@ -416,7 +416,7 @@ body.is-open {
 }
 
 /*=======================
-サービスのカード
+Serviceのカード
 =======================*/
 .p-serviceCard {
   width: 17.5rem;
@@ -443,9 +443,9 @@ body.is-open {
   margin-bottom: 0.625rem;
 }
 
-/*=======================
-Works
-=======================*/
+/*===========================
+フロントページ　Worksセクション
+===========================*/
 .p-works__menu {
   display: flex;
   flex-wrap: wrap;
@@ -537,7 +537,7 @@ Worksのカード
 }
 
 /*=============================
-Worksのカード
+フロントページ　Aboutセクション
 =============================*/
 .p-about .c-wrap .c-inner {
   display: flex;
@@ -576,7 +576,7 @@ Worksのカード
 }
 
 /*=============================
-Flow
+フロントページ　Flowセクション
 =============================*/
 .p-flow__item {
   display: flex;
@@ -613,6 +613,78 @@ Flow
   width: 1.25rem;
   height: auto;
   margin: 1.25rem auto;
+}
+
+/*=============================
+フロントページContactセクション
+=============================*/
+@media screen and (min-width: 1024px) {
+  .p-contact > div {
+    max-width: 580px;
+  }
+}
+.p-contact > div .p-contact__text {
+  margin-bottom: 3.75rem;
+}
+@media screen and (min-width: 601px) {
+  .p-contact > div .p-contact__text {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/*=============================
+Contactフォーム
+=============================*/
+@media screen and (min-width: 601px) {
+  .p-contactForm {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+.p-contactForm__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+.p-contactForm__item label {
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+.p-contactForm__item input,
+.p-contactForm__item textarea {
+  background: #FFFFFF;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 0.4375rem 1.25rem;
+}
+.p-contactForm__item:last-child {
+  margin-bottom: 2rem;
+}
+.p-contactForm__item--required label::after {
+  content: "必須";
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+  padding: 0 0.75rem;
+  background: #FAFD87;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.p-contactForm__privacyPolicy {
+  margin-bottom: 2rem;
+}
+.p-contactForm__privacyPolicy a {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 1px;
+}
+.p-contactForm__button input {
+  display: block;
+  margin: 0 auto;
+  background: #FAFD87;
+  border-radius: 6px;
+  padding: 0.5rem 2.5rem;
 }
 
 /*=======================

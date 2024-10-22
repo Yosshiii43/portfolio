@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*=============================
+フロントページContactセクション
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-contact{
+    > div{
+        @include fw.mq("pc"){
+            max-width: 580px;
+        }
+        .p-contact__text{
+            margin-bottom: fw.rem( 60 );
+            @include fw.mq("tab"){
+                margin-bottom: fw.rem( 40 );
+            }
+        }
+    }
+}

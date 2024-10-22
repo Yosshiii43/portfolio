@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/*=============================
+Contactフォーム
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-contactForm{
+    @include fw.mq("tab"){
+        max-width: 440px;
+        margin: 0 auto;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: fw.rem( 12 );
+        label{
+            position: relative;
+            margin-bottom: fw.rem( 4 );
+        }
+        input,
+        textarea{
+            background: fw.$color--white;
+            border: 1px solid fw.$color--black;
+            border-radius: 6px;
+            padding: fw.rem( 7 ) fw.rem( 20 );
+        }
+    }
+    &__item:last-child{
+        margin-bottom: fw.rem( 32 );
+    }
+    &__item--required{
+        label::after{
+        content: "必須";
+        font-size: fw.rem( 14 );
+        margin-left: fw.rem( 8 );
+        padding: 0 fw.rem( 12 );
+        background: fw.$color--yellow;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;//左上が上下中央にくる
+        transform: translateY(-50%);//afterの要素の高さ半分分をマイナス方向（上方向）に移動
+        }
+    }
+    &__privacyPolicy{
+        margin-bottom: fw.rem( 32 );
+        a{
+            text-decoration: underline;
+            text-underline-offset: fw.rem( 4 );
+            text-decoration-thickness: 1px;
+        }
+    }
+    &__button{
+        input{
+            display: block;
+            margin: 0 auto;
+            background: fw.$color--yellow;
+            border-radius: 6px;
+            padding: fw.rem( 8 ) fw.rem( 40 );
+        }
+    }
+}
