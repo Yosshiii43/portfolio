@@ -687,6 +687,55 @@ Contactフォーム
   padding: 0.5rem 2.5rem;
 }
 
+/*=============================
+footer
+=============================*/
+.p-footer {
+  padding: 5.3333333333vw 10.6666666667vw;
+}
+@media screen and (min-width: 601px) {
+  .p-footer {
+    padding: 2.6041666667vw 5.2083333333vw;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-footer {
+    padding: 1.3888888889vw 2.7777777778vw;
+  }
+}
+.p-footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem 0;
+}
+@media screen and (min-width: 601px) {
+  .p-footer div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.p-footer div .p-footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem 0;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 601px) {
+  .p-footer div .p-footer__menu {
+    flex-direction: row;
+    gap: 0 2rem;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-footer div .p-footer__menu {
+    gap: 0 2.5rem;
+  }
+}
+.p-footer div .p-footer__copyright {
+  text-align: center;
+}
+
 /*=======================
 body
 =======================*/
@@ -826,5 +875,12 @@ margin-bottom
 =============================*/
 .c-matginBottom--1em {
   margin-bottom: 1em;
+}
+
+/*=============================
+footer
+=============================*/
+.c-textSmall {
+  font-size: 0.875rem;
 }
 /*# sourceMappingURL=style.css.map */

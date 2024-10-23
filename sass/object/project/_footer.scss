@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*=============================
+footer
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-footer{
+    padding: fw.sp-vw( 20 ) fw.sp-vw( 40 );
+    @include fw.mq("tab"){
+        padding: fw.tab-vw( 20 ) fw.tab-vw( 40 );
+        @include fw.mq("pc"){
+            padding: fw.pc-vw( 20 ) fw.pc-vw( 40 );
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: fw.rem( 40 ) 0;
+        @include fw.mq("tab"){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .p-footer__menu{
+            display: flex;
+            flex-direction: column;
+            gap: fw.rem( 20 ) 0;
+            font-size: fw.rem( 20 );
+            @include fw.mq("tab"){
+                flex-direction: row;
+                gap: 0 fw.rem( 32 );
+                @include fw.mq("pc"){
+                    gap: 0 fw.rem( 40 );
+                }
+            }
+        }
+        .p-footer__copyright{
+            text-align: center;
+        }
+    }
+}

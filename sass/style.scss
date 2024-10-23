@@ -24,6 +24,7 @@
     @use "object/project/flow";
     @use "object/project/contact";
     @use "object/project/contactForm";
+    @use "object/project/footer";
 
 //compornent
     //@use "object/compornent/grid";
@@ -35,3 +36,4 @@
     @use "object/compornent/title";
     @use "object/compornent/fadeIn";
     @use "object/compornent/marginBottom";
+    @use "object/compornent/textSmall";

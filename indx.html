@@ -24,7 +24,9 @@
 <body class="c-body">
     <header class="l-header p-header" id="header">
         <h1 class="p-header__title">
-            <img src="./img/header__title.png" alt="Yoshino's portfolio site" width="116px" height="57px">
+            <a href="#">
+                <img src="./img/header__title.png" alt="Yoshino's portfolio site" width="116px" height="57px">
+            </a>
         </h1>
         <div class="p-header__menu">
             <button class="p-hamburger js-hamburger">
@@ -32,10 +34,10 @@
             </button>
             <ul class="p-gmenu">
                 <li class="p-gmenu__item"><a href="#service">Service</a></li>
-                <li class="p-gmenu__item"><a href="#">Works</a></li>
-                <li class="p-gmenu__item"><a href="#">About</a></li>
-                <li class="p-gmenu__item"><a href="#">Flow</a></li>
-                <li class="p-gmenu__item"><a href="#">Contact</a></li>
+                <li class="p-gmenu__item"><a href="#works">Works</a></li>
+                <li class="p-gmenu__item"><a href="#about">About</a></li>
+                <li class="p-gmenu__item"><a href="#flow">Flow</a></li>
+                <li class="p-gmenu__item"><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -268,53 +270,56 @@
         <section class="p-contact c-bg--gray" id="contact">
             <div class="c-wrap">
                 <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Contact</h2>
-                <div class="p-contact__text">
-                    <p>　お仕事のご依頼、ご相談は下記のお問い合わせフォームよりご連絡ください。</p>
-                    <p>　3営業日以内に返信させていただきます。</p>
-                    <p>　万が一、返信が届かない場合は、お手数ですが迷惑メールフォルダもご確認くださいますよう、お願い申し上げます。</p>
+                <div class="c-fadeIn js-fadeIn">
+                    <div class="p-contact__text">
+                        <p>　お仕事のご依頼、ご相談は下記のお問い合わせフォームよりご連絡ください。</p>
+                        <p>　3営業日以内に返信させていただきます。</p>
+                        <p>　万が一、返信が届かない場合は、お手数ですが迷惑メールフォルダもご確認くださいますよう、お願い申し上げます。</p>
+                    </div>
+                    <form class="p-contact_form p-contactForm">
+                        <div class="p-contactForm__item p-contactForm__item--required">
+                            <label for="name">お名前</label>
+                            <input type="text" name="name" placeholder="山田　太郎" required tabindex="1">
+                        </div>
+                        <div class="p-contactForm__item">
+                            <label for="furigana">ふりがな</label>
+                            <input type="text" name="furigana" placeholder="やまだ　たろう"  tabindex="2">
+                        </div>
+                        <div class="p-contactForm__item p-contactForm__item--required">
+                            <label for="company-name">会社名・担当部署など</label>
+                            <input type="text" name="company-name" placeholder="◯◯株式会社　広報部" required tabindex="3">
+                        </div>
+                        <div class="p-contactForm__item p-contactForm__item--required">
+                            <label for="email">メールアドレス</label>
+                            <input type="text" name="email" placeholder="sample@gmail.com" required tabindex="4">
+                        </div>
+                        <div class="p-contactForm__item p-contactForm__item--required">
+                            <label for="details">お問い合わせ内容</label>
+                            <textarea name="details" rows="4" required tabindex="5"></textarea>
+                        </div>
+                        <div class="p-contactForm__privacyPolicy">
+                            <input name="privacy-policy" type="checkbox" required>
+                            <label for="privacy-policy"><a href="">プライバシーポリシーに同意する</a></label>
+                        </div>
+                        <div class="p-contactForm__button">
+                            <input name="submit" type="submit" value="確認画面">
+                        </div>
+                    </form>
                 </div>
-                <form class="p-contact_form p-contactForm">
-                    <div class="p-contactForm__item p-contactForm__item--required">
-                        <label for="name">お名前</label>
-                        <input type="text" name="name" placeholder="山田　太郎" required tabindex="1">
-                    </div>
-                    <div class="p-contactForm__item">
-                        <label for="furigana">ふりがな</label>
-                        <input type="text" name="furigana" placeholder="やまだ　たろう"  tabindex="2">
-                    </div>
-                    <div class="p-contactForm__item p-contactForm__item--required">
-                        <label for="company-name">会社名・担当部署など</label>
-                        <input type="text" name="company-name" placeholder="◯◯株式会社　広報部" required tabindex="3">
-                    </div>
-                    <div class="p-contactForm__item p-contactForm__item--required">
-                        <label for="email">メールアドレス</label>
-                        <input type="text" name="email" placeholder="sample@gmail.com" required tabindex="4">
-                    </div>
-                    <div class="p-contactForm__item p-contactForm__item--required">
-                        <label for="details">お問い合わせ内容</label>
-                        <textarea name="details" rows="4" required tabindex="5"></textarea>
-                    </div>
-                    <div class="p-contactForm__privacyPolicy">
-                        <input name="privacy-policy" type="checkbox" required>
-                        <label for="privacy-policy"><a href="">プライバシーポリシーに同意する</a></label>
-                    </div>
-                    <div class="p-contactForm__button">
-                        <input name="submit" type="submit" value="確認画面">
-                    </div>
-                </form>
-                
-
             </div><!--c-wrap-->
         </section><!--p-contact-->
     </main>
-    <footer class="c-bg--yellow">
-        <ul class="p-gmenu">
-            <li class="p-gmenu__item"><a href="#service">Service</a></li>
-            <li class="p-gmenu__item"><a href="#">Works</a></li>
-            <li class="p-gmenu__item"><a href="#">About</a></li>
-            <li class="p-gmenu__item"><a href="#">Flow</a></li>
-            <li class="p-gmenu__item"><a href="#">Contact</a></li>
-        </ul>
+    <footer class="p-footer c-bg--yellow">
+        <div>
+            <ul class="p-footer__menu">
+                <li class="p-footer__menu__item"><a href="#service">Service</a></li>
+                <li class="p-footer__menu__item"><a href="#works">Works</a></li>
+                <li class="p-footer__menu__item"><a href="#about">About</a></li>
+                <li class="p-footer__menu__item"><a href="#flow">Flow</a></li>
+                <li class="p-footer__menu__item"><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="p-footer__copyright c-textSmall">&copy;2024 ️Yoshino Sumi</p>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>

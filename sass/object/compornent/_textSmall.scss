@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*=============================
+footer
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.c-textSmall{
+    font-size: fw.rem( 14 );
+}
