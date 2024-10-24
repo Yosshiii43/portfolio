@@ -1,0 +1,26 @@
+/*=============================
+スライダー（slick使用）
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-slider{
+    margin-bottom: calc(fw.rem( 60 ) + 30px);//.slick-dots部分の高さが吸収されてしまうため30px追加
+    .slick-dots{
+        li{
+            button::before{
+                font-size: fw.rem( 8 );
+            }
+            button:hover::before,
+            button:focus::before{
+                opacity: 1.0;
+                color: fw.$color--yellow;                
+            }
+        }
+        li.slick-active button:before
+        {
+                opacity: 1.0;
+                color: fw.$color--yellow;
+        }
+    }
+}

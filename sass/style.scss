@@ -25,6 +25,10 @@
     @use "object/project/contact";
     @use "object/project/contactForm";
     @use "object/project/footer";
+    @use "object/project/lowePageHeading" ;
+    @use "object/project/slider";
+    @use "object/project/worksDetail";
+    @use "object/project/siteLink";
 
 //compornent
     //@use "object/compornent/grid";
@@ -37,3 +41,5 @@
     @use "object/compornent/fadeIn";
     @use "object/compornent/marginBottom";
     @use "object/compornent/textSmall";
+
+//utility

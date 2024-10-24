@@ -1,0 +1,52 @@
+/*=============================
+Works（下層ページ）詳細
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-worksDetail{
+    table{
+        width: 100%; /* テーブルの幅を100%に設定 */
+        table-layout: auto; /* 列幅をコンテンツに応じて自動調整 */
+        border-collapse: collapse; /* セルの境界を統一 */
+        tr{            
+            display: block;
+            @include fw.mq("tab"){
+                display: table-row;
+            }
+            li{
+                list-style-type: disc;
+                margin-left: 1em;
+            }
+            li::marker{
+                font-size: 0.5em;
+            }
+        }
+        th,
+        td{
+            display: block;
+            @include fw.mq("tab"){
+                display: table-cell;
+            }
+        }
+        th{
+            width: 100%;
+            padding-bottom: fw.rem( 10 );
+            @include fw.mq("tab"){
+                width: auto; 
+                min-width: 9em;
+                max-width: 50%; /* 最大幅を50%に制限 */
+                white-space: normal; /* 折り返しを許可 */
+                word-break: break-word; /* 必要に応じて折り返す */
+                padding-right: 20px;
+            }
+        }
+        td{
+            padding-bottom: fw.rem( 24 );
+            @include fw.mq("tab"){
+                white-space: normal; /* 折り返しを許可 */
+                word-break: break-word; /* 長い内容があれば折り返す */
+            }
+        }
+    }
+}

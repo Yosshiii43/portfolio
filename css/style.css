@@ -736,6 +736,126 @@ footer
   text-align: center;
 }
 
+/*=============================
+下層ページ　ヘディング
+=============================*/
+.p-lowerPageHeading div {
+  padding: 16vw 5.3333333333vw;
+}
+@media screen and (min-width: 601px) {
+  .p-lowerPageHeading div {
+    padding: 7.8125vw 10.4166666667vw;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-lowerPageHeading div {
+    max-width: 920px;
+    padding: 6.9444444444vw 0;
+    margin: 0 auto;
+  }
+}
+.p-lowerPageHeading div p {
+  font-size: 2rem;
+}
+@media screen and (min-width: 601px) {
+  .p-lowerPageHeading div p {
+    font-size: 2.375rem;
+  }
+}
+
+/*=============================
+スライダー（slick使用）
+=============================*/
+.p-slider {
+  margin-bottom: calc(3.75rem + 30px);
+}
+.p-slider .slick-dots li button::before {
+  font-size: 0.5rem;
+}
+.p-slider .slick-dots li button:hover::before,
+.p-slider .slick-dots li button:focus::before {
+  opacity: 1;
+  color: #FAFD87;
+}
+.p-slider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #FAFD87;
+}
+
+/*=============================
+Works（下層ページ）詳細
+=============================*/
+.p-worksDetail table {
+  width: 100%; /* テーブルの幅を100%に設定 */
+  table-layout: auto; /* 列幅をコンテンツに応じて自動調整 */
+  border-collapse: collapse; /* セルの境界を統一 */
+}
+.p-worksDetail table tr {
+  display: block;
+}
+@media screen and (min-width: 601px) {
+  .p-worksDetail table tr {
+    display: table-row;
+  }
+}
+.p-worksDetail table tr li {
+  list-style-type: disc;
+  margin-left: 1em;
+}
+.p-worksDetail table tr li::marker {
+  font-size: 0.5em;
+}
+.p-worksDetail table th,
+.p-worksDetail table td {
+  display: block;
+}
+@media screen and (min-width: 601px) {
+  .p-worksDetail table th,
+.p-worksDetail table td {
+    display: table-cell;
+  }
+}
+.p-worksDetail table th {
+  width: 100%;
+  padding-bottom: 0.625rem;
+}
+@media screen and (min-width: 601px) {
+  .p-worksDetail table th {
+    width: auto;
+    min-width: 9em;
+    max-width: 50%; /* 最大幅を50%に制限 */
+    white-space: normal; /* 折り返しを許可 */
+    word-break: break-word; /* 必要に応じて折り返す */
+    padding-right: 20px;
+  }
+}
+.p-worksDetail table td {
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 601px) {
+  .p-worksDetail table td {
+    white-space: normal; /* 折り返しを許可 */
+    word-break: break-word; /* 長い内容があれば折り返す */
+  }
+}
+
+/*=============================
+サイトはこちら
+=============================*/
+.p-siteLink {
+  display: flex;
+  justify-content: right;
+}
+.p-siteLink ::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 6px;
+  margin-right: 0.25rem;
+  background: url(../../../img/siteLinkArrow.png);
+  background-size: contain;
+}
+
 /*=======================
 body
 =======================*/
@@ -804,24 +924,40 @@ body
 /*============================
 小見出し（c-title）
 ============================*/
-.c-title--circle::before {
+.c-title--frontH2 {
+  font-size: 2.375rem;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+.c-title--frontH2::before {
   content: "";
   display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background: #FAFD87;
   margin-bottom: 0.3em;
   margin-right: -0.3em;
 }
 
-.c-title--h2 {
-  font-size: 2.375rem;
+.c-title--lowerH2 {
+  font-size: 1.5rem;
   font-weight: 200;
-  text-align: center;
-  margin-bottom: 3.75rem;
+  position: relative;
+  margin: 0.3em 0 3.75rem 0.7em;
+  z-index: 1;
 }
-.c-title--h2::before {
-  width: 1.5rem;
-  height: 1.5rem;
+.c-title--lowerH2::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #FAFD87;
+  position: absolute;
+  top: -0.3em;
+  left: -0.7em;
+  z-index: -1;
 }
 
 .c-title--horizontalLine {
@@ -853,6 +989,24 @@ body
   background: #FAFD87;
   border-radius: 50%;
   margin-right: 0.5em;
+}
+
+.c-title--unorderCircle {
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  margin-left: 1.25rem;
+}
+.c-title--unorderCircle::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #FAFD87;
+  position: absolute;
+  top: 0%;
+  transform: translateY(50%);
+  left: -1.25rem;
 }
 
 /*=============================

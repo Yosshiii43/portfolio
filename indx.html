@@ -7,19 +7,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"><!--メインビジュアル内アニメーション用-->
+    <link rel="stylesheet" type="text/css" href="./js/slick-1.8.1/slick/slick.css"><!--スライダー(slick)用-->
+    <link rel="stylesheet" type="text/css" href="./js/slick-1.8.1/slick/slick-theme.css"><!--スライダー(slick)用-->
     <link rel="stylesheet" href="./css/style.css">
     <script>
         (function(d) {
-            var config = {
-            kitId: 'fzg2eal',
+          var config = {
+            kitId: 'hff0ssr',
             scriptTimeout: 3000,
             async: true
-            },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
-    </script>
-    <title>Document</title>
+      </script><!--Adobe Fontsより筑紫A丸ゴシック-->
+    <title>Yoshino’s Portfolio Site</title>
 </head>
 <body class="c-body">
     <header class="l-header p-header" id="header">
@@ -62,7 +64,7 @@
         </section>
         <section class="p-service c-bg--gray" id="service">
             <div class="c-wrap">
-                <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Service</h2>
+                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Service</h2>
                 <section class="p-service__content">
                     <h3 class="c-title--horizontalLine c-fadeIn js-fadeIn">デザイン</h3>
                     <div class="p-service__content__gallery c-fadeIn js-fadeIn">
@@ -133,7 +135,7 @@
         </section><!--p-service-->
         <section class="p-works" id="works">
             <div class="c-wrap">
-                <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Works</h2>
+                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Works</h2>
                 <ul class="p-works__menu c-fadeIn js-fadeIn">
                     <li class="p-works__menu__item"><button class="js-worksAll">ALL</button></li>
                     <li class="p-works__menu__item"><button class="js-worksAll">Webサイト</button></li>
@@ -207,7 +209,7 @@
         </section><!--p-Works-->
         <section class="p-about c-bg--gray" id="about">
             <div class="c-wrap">
-                <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">About</h2>
+                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">About</h2>
                 <div class="c-inner c-fadeIn js-fadeIn">
                     <div class="p-about__text">
                         <p class="c-matginBottom--1em">Yoshino</p>
@@ -227,7 +229,7 @@
         </section><!--p-about-->
         <section class="p-flow" id="flow">
             <div class="c-wrap">
-                <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Flow</h2>
+                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Flow</h2>
                 <div class="c-inner c-fadeIn js-fadeIn">
                     <section class="p-flow__item c-bg--gray">
                         <h3><span class="c-title--circleNumber">1</span>お問い合わせ ・ヒアリング</h3>
@@ -269,7 +271,7 @@
         </section><!--p-flow-->
         <section class="p-contact c-bg--gray" id="contact">
             <div class="c-wrap">
-                <h2 class="c-title--circle c-title--h2 c-fadeIn js-fadeIn">Contact</h2>
+                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Contact</h2>
                 <div class="c-fadeIn js-fadeIn">
                     <div class="p-contact__text">
                         <p>　お仕事のご依頼、ご相談は下記のお問い合わせフォームよりご連絡ください。</p>
@@ -321,9 +323,10 @@
             <p class="p-footer__copyright c-textSmall">&copy;2024 ️Yoshino Sumi</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
-    <script src="js/jquery.lettering.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><!--メインビジュアル内アニメーション用-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script><!--メインビジュアル内アニメーション用-->
+    <script src="./js/jquery-3.4.1.min.js"></script><!--スライダー(slick)用-->
+    <script src="./js/slick-1.8.1/slick/slick.js"></script><!--スライダー(slick)用-->
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

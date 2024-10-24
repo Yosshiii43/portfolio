@@ -4,10 +4,16 @@
 ============================*/
 @use "../../foundation/forwords" as fw;
 
-.c-title--circle{
+.c-title--frontH2{
+    font-size: fw.rem( 38 );
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: fw.rem( 60 );    
     &::before{
         content: "";
         display: inline-block;
+        width: fw.rem(24);//黄色のサークルの幅
+        height: fw.rem(24);//黄色のサークルの高さ
         border-radius: 50%;
         background: fw.$color--yellow;
         margin-bottom: 0.3em;
@@ -15,14 +21,22 @@
     }
 }
 
-.c-title--h2{//.c-title--circleと併用する
-    font-size: fw.rem( 38 );
+.c-title--lowerH2{
+    font-size: fw.rem( 24 );
     font-weight: 200;
-    text-align: center;
-    margin-bottom: fw.rem( 60 );
+    position: relative;
+    margin: 0.3em 0 fw.rem( 60 ) 0.7em;
+    z-index: 1;
     &::before{
-        width: fw.rem(24);//黄色のサークルの幅
-        height: fw.rem(24);//黄色のサークルの高さ
+        content: "";
+        width: fw.rem(32);//黄色のサークルの幅
+        height: fw.rem(32);//黄色のサークルの高さ
+        border-radius: 50%;
+        background: fw.$color--yellow;
+        position: absolute;
+        top: -0.3em;
+        left: -0.7em;
+        z-index: -1;
     }
 }
 
@@ -56,4 +70,22 @@
     background: fw.$color--yellow;
     border-radius: 50%;
     margin-right: 0.5em;
+}
+
+.c-title--unorderCircle{//Works詳細ページの表の中で使用
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    margin-left: fw.rem( 20 );
+    &::before{
+        content: "";
+        width: fw.rem(12);//黄色のサークルの幅
+        height: fw.rem(12);//黄色のサークルの高さ
+        border-radius: 50%;
+        background: fw.$color--yellow;
+        position: absolute;
+        top: 0%;
+        transform: translateY( 50% );
+        left: -(fw.rem( 20 ));
+    }
 }

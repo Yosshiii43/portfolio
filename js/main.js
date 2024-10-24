@@ -87,3 +87,13 @@ $(window).on('scroll load', function(){        /* ページロード時、また
 	  }
 	});
   });
+
+
+////Worksページスライダー(slick)////
+$('.js-slick01').slick({
+	dots: true,
+	infinite: true,
+	speed: 500,
+	fade: true,
+	cssEase: 'linear'
+});
