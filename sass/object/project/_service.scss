@@ -4,6 +4,25 @@
 =============================*/
 @use "../../foundation/forwords" as fw;
 .p-service{
+    .p-service__content__title{
+        font-size: fw.rem( 24 );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: fw.rem( 40 );
+        &::before,
+        &::after{
+            border-top: 1px solid;
+            content: "";
+            width: fw.rem( 40 );
+        }
+        &::before{
+            margin-right: 1em;
+        }
+        &::after{
+            margin-left: 1em;
+        }
+    }    
     &__content{
         &__gallery{
             display: flex;

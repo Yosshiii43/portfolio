@@ -409,6 +409,24 @@ body.is-open {
 /*=============================
 フロントページ　Serviceセクション
 =============================*/
+.p-service .p-service__content__title {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.p-service .p-service__content__title::before, .p-service .p-service__content__title::after {
+  border-top: 1px solid;
+  content: "";
+  width: 2.5rem;
+}
+.p-service .p-service__content__title::before {
+  margin-right: 1em;
+}
+.p-service .p-service__content__title::after {
+  margin-left: 1em;
+}
 .p-service__content__gallery {
   display: flex;
   flex-wrap: wrap;
@@ -1003,25 +1021,6 @@ body
   top: 0.1em;
   left: -0.5em;
   z-index: -1;
-}
-
-.c-title--horizontalLine {
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-}
-.c-title--horizontalLine::before, .c-title--horizontalLine::after {
-  border-top: 1px solid;
-  content: "";
-  width: 2.5rem;
-}
-.c-title--horizontalLine::before {
-  margin-right: 1em;
-}
-.c-title--horizontalLine::after {
-  margin-left: 1em;
 }
 
 .c-title--circleNumber {

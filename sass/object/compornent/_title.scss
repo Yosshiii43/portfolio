@@ -4,7 +4,7 @@
 ============================*/
 @use "../../foundation/forwords" as fw;
 
-.c-title--frontH2{
+.c-title--frontH2{//フロントページh2タグ用
     font-size: fw.rem( 38 );
     font-weight: 200;
     text-align: center;
@@ -21,7 +21,8 @@
     }
 }
 
-.c-title--lowerH2{
+
+.c-title--lowerH2{//下層ページh2タグ用
     font-size: fw.rem( 24 );
     font-weight: 200;
     position: relative;
@@ -40,7 +41,7 @@
     }
 }
 
-.c-title--circle{
+.c-title--circle{//フロントページWorksのタグで使用
     position: relative;
     z-index: 1;
     margin-left: 0.5em;
@@ -54,26 +55,6 @@
         top: 0.1em;
         left: -0.5em;
         z-index: -1;
-    }
-}
-
-.c-title--horizontalLine{
-    font-size: fw.rem( 24 );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: fw.rem( 40 );
-    &::before,
-    &::after{
-        border-top: 1px solid;
-        content: "";
-        width: fw.rem( 40 );
-    }
-    &::before{
-        margin-right: 1em;
-    }
-    &::after{
-        margin-left: 1em;
     }
 }
 
