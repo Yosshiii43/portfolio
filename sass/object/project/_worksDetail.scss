@@ -14,13 +14,6 @@ Works（下層ページ）詳細
             @include fw.mq("tab"){
                 display: table-row;
             }
-            li{
-                list-style-type: disc;
-                margin-left: 1em;
-            }
-            li::marker{
-                font-size: 0.5em;
-            }
         }
         th,
         td{

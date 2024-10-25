@@ -29,6 +29,7 @@
     @use "object/project/slider";
     @use "object/project/worksDetail";
     @use "object/project/siteLink";
+    @use "object/project/privacy";
 
 //compornent
     //@use "object/compornent/grid";
@@ -41,5 +42,6 @@
     @use "object/compornent/fadeIn";
     @use "object/compornent/marginBottom";
     @use "object/compornent/textSmall";
+    @use "object/compornent/listStyle";
 
 //utility

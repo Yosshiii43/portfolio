@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*=============================
+プライバシーポリシー
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-privacy{
+    &__head,
+    &__item{
+        margin-bottom: fw.rem( 40 );
+    }
+    &__item{
+        > *{
+            margin-bottom: fw.rem( 20 );
+        }
+        &__secondary{
+            margin-left: fw.rem( 16 );
+            > *{
+                margin-bottom: fw.rem( 8 );
+            }
+        }
+    }
+    &__foot{
+        text-align: right;
+    }
+}

@@ -40,6 +40,23 @@
     }
 }
 
+.c-title--circle{
+    position: relative;
+    z-index: 1;
+    margin-left: 0.5em;
+    &::before{
+        content: "";
+        width: fw.rem(12);//黄色のサークルの幅
+        height: fw.rem(12);//黄色のサークルの高さ
+        border-radius: 50%;
+        background: fw.$color--yellow;
+        position: absolute;
+        top: 0.1em;
+        left: -0.5em;
+        z-index: -1;
+    }
+}
+
 .c-title--horizontalLine{
     font-size: fw.rem( 24 );
     display: flex;

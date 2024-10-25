@@ -23,10 +23,6 @@ Worksのカード
         p{
             font-size: fw.rem( 14 );
             font-weight: 300;
-            &::before{//黄色のサークル
-                width: fw.rem(12);
-                height: fw.rem(12);
-            }
         }
     }
     > p img{

@@ -2,13 +2,17 @@
 /*=======================
   ベースCSS
   =======================*/
+html {
+  font-size: 17px;
+}
+
 body {
   min-width: 320px;
   width: 100%;
   margin: 0;
   background: #FFFFFF;
-  font-size: 1.1rem;
-  font-family: "Nunito", "fot-tsukuardgothic-std", sans-serif;
+  font-size: 1rem;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #333333;
@@ -419,7 +423,17 @@ body.is-open {
 Serviceのカード
 =======================*/
 .p-serviceCard {
-  width: 17.5rem;
+  width: 74.6666666667vw;
+}
+@media screen and (min-width: 601px) {
+  .p-serviceCard {
+    width: 36.4583333333vw;
+  }
+}
+@media screen and (min-width: 601px) and (min-width: 1024px) {
+  .p-serviceCard {
+    width: 19.4444444444vw;
+  }
 }
 .p-serviceCard__icon {
   width: 32vw;
@@ -527,10 +541,6 @@ Worksのカード
 .p-worksCard__tags p {
   font-size: 0.875rem;
   font-weight: 300;
-}
-.p-worksCard__tags p::before {
-  width: 0.75rem;
-  height: 0.75rem;
 }
 .p-worksCard > p img {
   border-radius: 4px;
@@ -798,13 +808,6 @@ Works（下層ページ）詳細
     display: table-row;
   }
 }
-.p-worksDetail table tr li {
-  list-style-type: disc;
-  margin-left: 1em;
-}
-.p-worksDetail table tr li::marker {
-  font-size: 0.5em;
-}
 .p-worksDetail table th,
 .p-worksDetail table td {
   display: block;
@@ -856,6 +859,25 @@ Works（下層ページ）詳細
   background-size: contain;
 }
 
+/*=============================
+プライバシーポリシー
+=============================*/
+.p-privacy__head, .p-privacy__item {
+  margin-bottom: 2.5rem;
+}
+.p-privacy__item > * {
+  margin-bottom: 1.25rem;
+}
+.p-privacy__item__secondary {
+  margin-left: 1rem;
+}
+.p-privacy__item__secondary > * {
+  margin-bottom: 0.5rem;
+}
+.p-privacy__foot {
+  text-align: right;
+}
+
 /*=======================
 body
 =======================*/
@@ -881,8 +903,14 @@ body
 /*=============================
 フォントファミリー ・フォントウェイト
   =============================*/
-.c-font--tsukuarg {
+.c-font--tsukuarg200 {
   font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 200;
+}
+
+.c-font--tsukuarg300 {
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 300;
 }
 
 .c-font--nunito200 {
@@ -957,6 +985,23 @@ body
   position: absolute;
   top: -0.3em;
   left: -0.7em;
+  z-index: -1;
+}
+
+.c-title--circle {
+  position: relative;
+  z-index: 1;
+  margin-left: 0.5em;
+}
+.c-title--circle::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #FAFD87;
+  position: absolute;
+  top: 0.1em;
+  left: -0.5em;
   z-index: -1;
 }
 
@@ -1036,5 +1081,23 @@ footer
 =============================*/
 .c-textSmall {
   font-size: 0.875rem;
+}
+
+/*=============================
+リストスタイル調整
+=============================*/
+.c-listStyle li {
+  position: relative;
+  padding-left: 1em;
+}
+.c-listStyle li::before {
+  content: "";
+  position: absolute;
+  left: 0.4em;
+  top: 0.65em;
+  width: 2px;
+  height: 2px;
+  background: #333333;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */

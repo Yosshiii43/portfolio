@@ -34,7 +34,7 @@
             <button class="p-hamburger js-hamburger">
                 <span>menuボタン</span>
             </button>
-            <ul class="p-gmenu">
+            <ul class="p-gmenu c-font--nunito200">
                 <li class="p-gmenu__item"><a href="#service">Service</a></li>
                 <li class="p-gmenu__item"><a href="#works">Works</a></li>
                 <li class="p-gmenu__item"><a href="#about">About</a></li>
@@ -48,7 +48,7 @@
             <div>
                 <div class="p-mainVisual__title">
                     <p class="p-mainVisual__title__top c-font--nunito200 randomAnime">Yoshino’s Portfolio Site</p>
-                    <p class="p-mainVisual__title__bottom randomAnime"><span class="c-font--nunito300">Web</span>デザイン / コーディング</p>
+                    <p class="p-mainVisual__title__bottom randomAnime c-font--tsukuarg200">Webデザイン / コーディング</p>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
         </section>
         <section class="p-service c-bg--gray" id="service">
             <div class="c-wrap">
-                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Service</h2>
+                <h2 class="c-title--frontH2 c-font--nunito200 c-fadeIn js-fadeIn">Service</h2>
                 <section class="p-service__content">
                     <h3 class="c-title--horizontalLine c-fadeIn js-fadeIn">デザイン</h3>
                     <div class="p-service__content__gallery c-fadeIn js-fadeIn">
@@ -135,7 +135,7 @@
         </section><!--p-service-->
         <section class="p-works" id="works">
             <div class="c-wrap">
-                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Works</h2>
+                <h2 class="c-title--frontH2 c-font--nunito200 c-fadeIn js-fadeIn">Works</h2>
                 <ul class="p-works__menu c-fadeIn js-fadeIn">
                     <li class="p-works__menu__item"><button class="js-worksAll">ALL</button></li>
                     <li class="p-works__menu__item"><button class="js-worksAll">Webサイト</button></li>
@@ -209,7 +209,7 @@
         </section><!--p-Works-->
         <section class="p-about c-bg--gray" id="about">
             <div class="c-wrap">
-                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">About</h2>
+                <h2 class="c-title--frontH2 c-font--nunito200 c-fadeIn js-fadeIn">About</h2>
                 <div class="c-inner c-fadeIn js-fadeIn">
                     <div class="p-about__text">
                         <p class="c-matginBottom--1em">Yoshino</p>
@@ -229,7 +229,7 @@
         </section><!--p-about-->
         <section class="p-flow" id="flow">
             <div class="c-wrap">
-                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Flow</h2>
+                <h2 class="c-title--frontH2 c-font--nunito200 c-fadeIn js-fadeIn">Flow</h2>
                 <div class="c-inner c-fadeIn js-fadeIn">
                     <section class="p-flow__item c-bg--gray">
                         <h3><span class="c-title--circleNumber">1</span>お問い合わせ ・ヒアリング</h3>
@@ -271,7 +271,7 @@
         </section><!--p-flow-->
         <section class="p-contact c-bg--gray" id="contact">
             <div class="c-wrap">
-                <h2 class="c-title--frontH2 c-fadeIn js-fadeIn">Contact</h2>
+                <h2 class="c-title--frontH2 c-font--nunito200 c-fadeIn js-fadeIn">Contact</h2>
                 <div class="c-fadeIn js-fadeIn">
                     <div class="p-contact__text">
                         <p>　お仕事のご依頼、ご相談は下記のお問い合わせフォームよりご連絡ください。</p>
@@ -300,8 +300,8 @@
                             <textarea name="details" rows="4" required tabindex="5"></textarea>
                         </div>
                         <div class="p-contactForm__privacyPolicy">
-                            <input name="privacy-policy" type="checkbox" required>
-                            <label for="privacy-policy"><a href="">プライバシーポリシーに同意する</a></label>
+                            <input name="privacy" type="checkbox" required>
+                            <label for="privacy"><a href="">プライバシーポリシーに同意する</a></label>
                         </div>
                         <div class="p-contactForm__button">
                             <input name="submit" type="submit" value="確認画面">
@@ -313,19 +313,19 @@
     </main>
     <footer class="p-footer c-bg--yellow">
         <div>
-            <ul class="p-footer__menu">
+            <ul class="p-footer__menu c-font--nunito200">
                 <li class="p-footer__menu__item"><a href="#service">Service</a></li>
                 <li class="p-footer__menu__item"><a href="#works">Works</a></li>
                 <li class="p-footer__menu__item"><a href="#about">About</a></li>
                 <li class="p-footer__menu__item"><a href="#flow">Flow</a></li>
                 <li class="p-footer__menu__item"><a href="#contact">Contact</a></li>
             </ul>
-            <p class="p-footer__copyright c-textSmall">&copy;2024 ️Yoshino Sumi</p>
+            <p class="p-footer__copyright c-textSmall c-font--nunito200">&copy;2024 ️Yoshino Sumi</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><!--メインビジュアル内アニメーション用-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script><!--メインビジュアル内アニメーション用-->
-    <script src="./js/jquery-3.4.1.min.js"></script><!--スライダー(slick)用-->
+    <script src="js/jquery.lettering.js"></script><!--メインビジュアル内アニメーション用-->
     <script src="./js/slick-1.8.1/slick/slick.js"></script><!--スライダー(slick)用-->
     <script type="text/javascript" src="./js/main.js"></script>
 </body>

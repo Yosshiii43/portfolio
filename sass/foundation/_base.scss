@@ -5,13 +5,17 @@
 
 @use "../foundation/forwords" as fw;
 
+html{
+    font-size: 17px;
+}
+
 body {
     min-width: 320px;
     width: 100%;
     margin: 0;
     background: fw.$color--white;
-    font-size: 1.1rem;
-    font-family: "Nunito","fot-tsukuardgothic-std", sans-serif;
+    font-size: 1rem;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
     font-weight: 300;
     font-style: normal;
     color: fw.$color--black;

@@ -6,7 +6,13 @@ Serviceのカード
 @use "sass:math";
 
 .p-serviceCard{
-    width: fw.rem( 280 );
+    width: fw.sp-vw( 280 );
+    @include fw.mq("tab"){
+        width: fw.tab-vw( 280);
+        @include fw.mq("pc"){
+            width: fw.pc-vw( 280);
+        }
+    }
     &__icon{
         width: fw.sp-vw( 120 );
         background: fw.$color--white;

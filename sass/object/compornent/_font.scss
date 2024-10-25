@@ -4,8 +4,15 @@
   =============================*/
     @use "../../foundation/forwords" as fw;
 
-.c-font--tsukuarg{
+
+.c-font--tsukuarg200{
   font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 200;
+}
+
+.c-font--tsukuarg300{
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 300;
 }
 
 .c-font--nunito200{
