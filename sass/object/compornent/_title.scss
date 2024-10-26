@@ -51,7 +51,7 @@
     font-weight: 300;
     display: inline-block;
     position: relative;
-    margin-left: fw.rem( 20 );
+    padding-left: fw.rem( 20 );
     &::before{
         content: "";
         width: fw.rem(12);//黄色のサークルの幅
@@ -59,8 +59,8 @@
         border-radius: 50%;
         background: fw.$color--yellow;
         position: absolute;
-        top: 0%;
+        top: 0;
         transform: translateY( 50% );
-        left: -(fw.rem( 20 ));
+        left: 0;
     }
 }

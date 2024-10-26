@@ -901,6 +901,16 @@ Works（下層ページ）詳細
   text-align: right;
 }
 
+/*============================
+404ページ
+============================*/
+.p-404 div {
+  margin-bottom: 3.75rem;
+}
+.p-404 .p-siteLink {
+  justify-content: left;
+}
+
 /*=======================
 body
 =======================*/
@@ -1020,7 +1030,7 @@ body
   font-weight: 300;
   display: inline-block;
   position: relative;
-  margin-left: 1.25rem;
+  padding-left: 1.25rem;
 }
 .c-title--unorderCircle::before {
   content: "";
@@ -1029,9 +1039,9 @@ body
   border-radius: 50%;
   background: #FAFD87;
   position: absolute;
-  top: 0%;
+  top: 0;
   transform: translateY(50%);
-  left: -1.25rem;
+  left: 0;
 }
 
 /*=============================

@@ -30,6 +30,7 @@
     @use "object/project/worksDetail";
     @use "object/project/siteLink";
     @use "object/project/privacy";
+    @use "object/project/404" as nf404;
 
 //compornent
     //@use "object/compornent/grid";

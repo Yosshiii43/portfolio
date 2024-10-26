@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*============================
+404ページ
+============================*/
+@use "../../foundation/forwords" as fw;
+
+.p-404{
+    div{
+        margin-bottom: fw.rem( 60 );
+    }
+    .p-siteLink{
+        justify-content: left;
+    }
+}
