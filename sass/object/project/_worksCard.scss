@@ -18,9 +18,9 @@ Worksのカード
     &__tags{
         font-size: fw.rem( 14 );
         position: absolute;
-        top: fw.rem( 1 );
+        top: fw.rem( 12 );
         left: fw.rem( 18 );
-        .c-title--circle{
+        p{
             font-size: fw.rem( 14 );
             &::before{
                 width: fw.rem(12);//黄色のサークルの幅

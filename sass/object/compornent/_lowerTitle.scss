@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*============================
+小見出し（c-title）
+============================*/
+@use "../../foundation/forwords" as fw;
+
+.c-lowerTitle{
+    font-size: fw.rem( 24 );
+    margin-bottom: fw.rem( 60 );
+    margin-top: 0.3em;
+    margin-left: 0.7em;
+    &::before{
+        width: fw.rem( 32 );
+        height: fw.rem( 32 );
+        top: -0.3em;
+        left: -0.7em;
+    }
+}
