@@ -22,7 +22,7 @@
 }
 
 
-.c-title--lowerH2{//下層ページh2タグ用
+.c-title--lowerH1{//下層ページh1タグ用
     font-size: fw.rem( 24 );
     font-weight: 200;
     position: relative;
@@ -41,24 +41,21 @@
     }
 }
 
-.c-title--circle{//フロントページWorksのタグで使用
+.c-title--circle{//左斜め上に黄色い丸をつける
     position: relative;
     z-index: 1;
-    margin-left: 0.5em;
+    //marginは個別に指定
     &::before{
         content: "";
-        width: fw.rem(12);//黄色のサークルの幅
-        height: fw.rem(12);//黄色のサークルの高さ
         border-radius: 50%;
         background: fw.$color--yellow;
         position: absolute;
-        top: 0.1em;
-        left: -0.5em;
         z-index: -1;
+        //width,height,top,leftは個別に指定
     }
 }
 
-.c-title--circleNumber{
+.c-title--circleNumber{//黄色の丸つき数字
     font-size: 0.9em;
     display: inline-block;
     width: 1.2em;
@@ -70,7 +67,7 @@
     margin-right: 0.5em;
 }
 
-.c-title--unorderCircle{//Works詳細ページの表の中で使用
+.c-title--unorderCircle{//Works詳細ページの表のthで使用
     font-weight: 300;
     display: inline-block;
     position: relative;

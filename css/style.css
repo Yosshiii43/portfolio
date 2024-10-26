@@ -553,12 +553,17 @@ Worksのカード
 .p-worksCard__tags {
   font-size: 0.875rem;
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 0.75rem;
+  left: 1.125rem;
 }
-.p-worksCard__tags p {
+.p-worksCard__tags .c-title--circle {
   font-size: 0.875rem;
-  font-weight: 300;
+}
+.p-worksCard__tags .c-title--circle::before {
+  width: 0.75rem;
+  height: 0.75rem;
+  top: 0.1em;
+  left: -0.5em;
 }
 .p-worksCard > p img {
   border-radius: 4px;
@@ -880,6 +885,15 @@ Works（下層ページ）詳細
 /*=============================
 プライバシーポリシー
 =============================*/
+.p-privacy .c-title--circle {
+  margin: 0.3em 0 3.75rem 0.7em;
+}
+.p-privacy .c-title--circle::before {
+  width: 2rem;
+  height: 2rem;
+  top: -0.3em;
+  left: -0.7em;
+}
 .p-privacy__head, .p-privacy__item {
   margin-bottom: 2.5rem;
 }
@@ -987,14 +1001,14 @@ body
   margin-right: -0.3em;
 }
 
-.c-title--lowerH2 {
+.c-title--lowerH1 {
   font-size: 1.5rem;
   font-weight: 200;
   position: relative;
   margin: 0.3em 0 3.75rem 0.7em;
   z-index: 1;
 }
-.c-title--lowerH2::before {
+.c-title--lowerH1::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -1009,17 +1023,12 @@ body
 .c-title--circle {
   position: relative;
   z-index: 1;
-  margin-left: 0.5em;
 }
 .c-title--circle::before {
   content: "";
-  width: 0.75rem;
-  height: 0.75rem;
   border-radius: 50%;
   background: #FAFD87;
   position: absolute;
-  top: 0.1em;
-  left: -0.5em;
   z-index: -1;
 }
 

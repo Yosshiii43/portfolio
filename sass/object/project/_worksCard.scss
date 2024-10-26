@@ -18,11 +18,16 @@ Worksのカード
     &__tags{
         font-size: fw.rem( 14 );
         position: absolute;
-        top: 12px;
-        left: 12px;
-        p{
+        top: fw.rem( 1 );
+        left: fw.rem( 18 );
+        .c-title--circle{
             font-size: fw.rem( 14 );
-            font-weight: 300;
+            &::before{
+                width: fw.rem(12);//黄色のサークルの幅
+                height: fw.rem(12);//黄色のサークルの高さ
+                top: 0.1em;
+                left: -0.5em;
+            }
         }
     }
     > p img{
