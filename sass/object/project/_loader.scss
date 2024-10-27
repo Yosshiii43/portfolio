@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*=============================
+ローディング画面
+=============================*/
+@use "../../foundation/forwords" as fw;
+@use "sass:math";
+
+.p-loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: fw.$color--gray; /* 不透明な背景色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 高い値に設定して最前面に表示 */
+}
+
+/* Loader Animation Styles */
+.p-loader {
+  width: 120px; /* ドッツの幅を160pxに設定 */
+  aspect-ratio: 4; /* アスペクト比を設定（4:1の比率） */
+  background: radial-gradient(circle closest-side, #FAFD87 90%, #0000) 0 / calc(100% /3.0) 100% no-repeat;
+  animation: l2 1s steps(3) infinite; /* アニメーションを設定 */
+}
+
+@keyframes l2 {
+  to {
+    background-position: 150%; /* 背景の位置をアニメーションで移動 */
+  }
+}

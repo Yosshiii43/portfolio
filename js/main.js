@@ -1,3 +1,11 @@
+////ローディングアニメーション////
+document.addEventListener("DOMContentLoaded", function() {
+	// 3秒後にローディング画面を非表示に
+	setTimeout(function() {
+	  document.querySelector(".p-loadingOverlay").style.display = "none";
+	}, 3000); // 3000ms（3秒）後に非表示にします
+  });
+
 ////ハンバーガーメニュー////
 document.querySelector( '.js-hamburger' ).addEventListener(
 	'click',
@@ -40,7 +48,7 @@ $(function(){
 var Obj = {
 	loop: false,
 	minDisplayTime: 2000,// アニメーションの間隔時間
-	initialDelay: 500, // アニメーション開始までの遅延時間
+	initialDelay: 900, // アニメーション開始までの遅延時間
 	autoStart: true,
 	in: {
 		effect: 'fadeInUp',//animate.css の中にある採用したい動きのクラス名

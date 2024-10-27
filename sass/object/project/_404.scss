@@ -5,7 +5,7 @@
 @use "../../foundation/forwords" as fw;
 
 .p-404{
-    div{
+    &__text{
         margin-bottom: fw.rem( 60 );
     }
     .p-siteLink{
