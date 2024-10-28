@@ -1,11 +1,27 @@
 ////ローディングアニメーション////
-document.addEventListener("DOMContentLoaded", function() {
-	// 3秒後にローディング画面を非表示に
-	setTimeout(function() {
-	  document.querySelector(".p-loadingOverlay").style.display = "none";
-	}, 3000); // 3000ms（3秒）後に非表示にします
-  });
+//document.addEventListener("DOMContentLoaded", function() {
+//	// 3秒後にローディング画面を非表示に
+//	setTimeout(function() {
+//	  document.querySelector(".p-loadingOverlay").style.display = "none";
+//	}, 3000); // 3000ms（3秒）後に非表示にします
+//  });
 
+////ローディングアニメーション////
+document.addEventListener("DOMContentLoaded", function () {
+	// localStorageに"visited"フラグがあるかを確認
+	const isVisited = localStorage.getItem("visited");
+  
+	if (isVisited) {
+	  // 一度訪問済みの場合はローディングアニメーションを非表示
+	  document.querySelector(".p-loadingOverlay").style.display = "none";
+	} else {
+	  // 初回訪問の場合はローディングアニメーションを表示し、フラグを設定
+	  setTimeout(() => {
+		document.querySelector(".p-loadingOverlay").style.display = "none";
+		localStorage.setItem("visited", "true");
+	  }, 3000); // アニメーションの表示時間を設定（例: 2秒）
+	}
+  });
 ////ハンバーガーメニュー////
 document.querySelector( '.js-hamburger' ).addEventListener(
 	'click',
